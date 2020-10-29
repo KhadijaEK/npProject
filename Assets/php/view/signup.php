@@ -41,11 +41,9 @@ session_start();
                                             <input id="confirm_password" class="form-control mb-3" type="password" name="confirm_pw" placeholder="Confirm password" required onChange="checkPasswordMatch();">
                                             <div id="checkmatch"></div>
                                         </div>
-
-                                        </div>
-                                        <br>
                                         <button type="submit" name="signup" class="btn btn-danger gobtn"><b>Register<i class="fa fa-paw animate__animated animate__fadeIn" aria-hidden="true"></i></b></button>
                                     </form>
+                                    <p>Already have an account? <a href="../../php/view/signin.php">Log in</a></p>
                             </div>
                         </div>
                     </div>

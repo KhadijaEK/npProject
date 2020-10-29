@@ -114,9 +114,9 @@ html, body {
     color:  #33697B ;
     cursor: pointer;
     float: right;
-    font-weight: 800;
+    font-weight: 600;
     outline: none;
-    padding-right: 5%;
+    padding-right: 15%;
     position: relative;
 }
 

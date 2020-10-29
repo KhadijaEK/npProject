@@ -5,6 +5,12 @@
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
+
+/* the navbar menu on hover */
+
+
+/* End of the navbar menu on hover */
+
  .hamburger {
     padding: 15px 15px;
     display: inline-block;
@@ -16,7 +22,7 @@
     color: inherit;
     text-transform: none;
     background-color: transparent;
-    border: 0;
+    border: transparent;
     margin: 0;
     overflow: visible; }
     .hamburger:hover {
@@ -31,8 +37,9 @@
   .hamburger-box {
     width: 40px;
     height: 24px;
-    display: inline-block;
-    position: relative; }
+    display: block;
+    float: right; 
+  }
   
   .hamburger-inner {
     display: block;

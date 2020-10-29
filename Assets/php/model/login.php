@@ -17,6 +17,7 @@ include('../../php/view/signin.php');
 if(isset($_POST["login-btn"]))  
 {  
     $db=dbConnect();
+
     $username = $_POST['username'];
 
         //  Récupération de l'utilisateur et de son pass hashé
@@ -38,12 +39,12 @@ if(isset($_POST["login-btn"]))
                 session_start();
                 $_SESSION['id'] = $resultat['id'];
                 $_SESSION['username'] = $username;
-                header('location: welcome.php');
+                header('Location: welcome.php');
                 echo 'You are connected!';
             }
             else {
                 echo 'Wrong Username or Password!';
             }
         }
-      }    
+    }    
 ?>
