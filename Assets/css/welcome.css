@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html, body{
+    font-family: 'Roboto', sans-serif;
+}
+
+#fullpage{
+    height: 100vh;
+    overflow: hidden;
+}
+
+#fullpage section{
+    height: 100vh;
+}
+
+#fullpage section:nth-child(1){
+    background: url('../images/mat-reding-o95TQazzaOg-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#fullpage section:nth-child(2){
+    background: #05386b;
+}
+
+
+.container{
+   
+    margin: 0 auto;
+    overflow: hidden;  
+    padding: 30px;
+    position: relative;  
+    height: 100vh;
+    width: 90%;
+}
+
+#container-top{
+  
+    margin: 0 auto;
+    height: 233px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    left: 5%;
+}
+
+/*! responsive */
+@media screen and (max-width: 375px) {
+    .container{
+        width: 375px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+
+    #container-top, #container-bottom {
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        width: 375px;
+        height: auto;
+        margin-left: 0px;
+        padding: 0px;
+     
+    }
+    
+    .comment-mainbox, .comment-wrap, .headtitle, .ratingBox{
+        flex-direction: column;
+        position: relative;
+        margin: 0px;
+        padding:0px;
+        left: 0px;
+        width: 300px;
+      
+        
+    }
+
+    .stars-ratingBox{
+        flex-direction: column;
+        position: relative;
+        width: 50px;
+        left: 0px;
+    }
+
+    .space2, .space3{
+        left: 0px;
+    }
+    
+   
+  }
+/* !end of responsive */
+
+
+
+.headtitle{
+  
+    height: auto;
+    overflow: hidden;
+    padding: 5px;
+    width: 500px;
+}
+
+h1{
+    font-family: 'Oswald', serif;
+    color: #05386b;
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: 0.0001em;
+    line-height: 0.95em;
+}
+
+p {
+    padding-top: 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+
+}
+
+/* button */
+.findbtn{
+    background-color: #5cdb95;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    height: 34px;
+    font-size: 21px;
+    font-weight: 600;
+    left: 11%;
+    margin-right: -50%;
+    position: absolute;
+    top: 90%;
+    transform: translate(-50%, -50%);  
+    width: 233px;
+}
+
+.findbtn:hover{
+    background-color: #8ee4af;
+    border: transparent;
+    outline: none;
+}
+
+/* review boxes on the right */
+.ratingBox{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    width: 300px;
+}
+
+.stars-ratingBox{
+    background-color:#05386b;
+    border-radius: 7px;
+    font-weight: 600;
+    height: 60px;
+    margin: 15px;
+    padding-left: 5%;
+    position: relative;
+    width: 377px;
+
+}
+
+.star-text{
+    color: #ffffff;
+    position: relative;
+    display: inline-flex;
+    padding-left: 25px;
+    bottom: 5%;
+    font-size: 13px;
+    vertical-align: bottom;
+}
+
+.space2{left: 20px;}
+.space3{left: 40px;}
+
+
+#container-bottom{
+    
+    height: 300px;
+    margin: 0 30px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    bottom: 0%;
+    
+}
+
+.comment-mainbox{
+    display: flex;
+}
+.comment-wrap{
+    background-color: #ffffff;
+    border-radius: 3%;
+
+    flex-direction: row;
+    height: 200px;
+    justify-content: space-around;
+    margin: 20px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    width: 300px;
+
+}
+
+h4{
+    color: #05386b;
+    font-size: 10pt;
+    margin-left: 6em;
+}
+
+h5{
+    color: #edf5e1;
+    font-size: 8pt;
+    font-weight: 600;
+    line-height: 2em;
+    margin-left: 7.7em;
+
+}
+
+.comment-text{
+    clear: left;
+    color: #646464;
+    font-size: 10pt;
+    font-weight: 500;
+    padding-top: 1.5em;
+}
+
+/* alignement horizontal comment box  */
+
+.level2{
+    top: 20px;    
+}
+
+.level3{
+    top: 40px;
+        
+}
+
+.profile-picture{
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    width: 20%;
+   
+}

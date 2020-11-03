@@ -10,13 +10,17 @@ session_start();
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+
 
 </head>
 <body>
 
         <section id="cover2" class="min-vh-100">
             <div id="cover-caption">
-                <div class="container">
+                <div class="container" style="width:700px;">
                     <div class="row">
                         <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 mx-auto text-center form p-4">
                             <h1 class="title">Register</h1>

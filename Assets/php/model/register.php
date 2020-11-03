@@ -22,7 +22,6 @@ if(isset($_POST['signup'])){
     // Execute the query using the data we just defined
     // The execute() method returns TRUE if it is successful and FALSE if it is not, allowing you to write your own messages here
     if ($my_Insert_Statement->execute()) {
-      echo "You have signup successfully, now please log in to confirm";
     
       header('Location: welcome.php');
       exit;
