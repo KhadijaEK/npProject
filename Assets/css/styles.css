@@ -51,7 +51,7 @@ table {
     
 }
 
-#landingpage {
+.landingpage {
     background: url("../images/joshua-earle-wFWQmOyfkkM-unsplash.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -71,37 +71,38 @@ table {
         text-align: center;
 }
 
-#landingpage h1{
+h1{
     color: white;
     font-family: 'Oswald', serif;    
     font-weight: 800;
-    font-size: 34px;
-    line-height: 55px;
-    margin: 0;
+    font-size: 55px;
+  
+    margin: 0 auto;
     text-align: center;
 }
 
-#landingpage h2{
+h2{
     color: white;
     font-weight: 500;
     font-size: 15px;
-    line-height: 21px;
+    line-height: 55px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Find a walk */
+/* Landpage Find a walk - flip button*/
+
 
 
 .findbtn{
-    background-color: #33697B;
-    border: none;
-    border-radius: 7px;
+    background-color: F1B24A;
+    border: 2px solid #F1B24A;
+    border-radius: 20px;
     color: white;
     cursor: pointer;
     height: 34px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     left: 50%;
     margin-right: -50%;
     position: absolute;
@@ -111,7 +112,7 @@ table {
 }
 
 .findbtn:hover{
-    background-color: #FC9885;
+    background-color: transparent;
     border: transparent;
     outline: none;
 }
@@ -125,7 +126,7 @@ table {
     float: right;
     font-weight: 600;
     outline: none;
-    padding-right: 15%;
+    padding-right: 5%;
     position: relative;
 }
 

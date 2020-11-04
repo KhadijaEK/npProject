@@ -17,8 +17,7 @@ session_start();
            }  
            else  
            {  
-                $password=$_POST['password'];
-                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
                 $query = "SELECT * FROM users WHERE username = username AND password=password";  
                 $statement = $db->prepare($query);  
                 $statement->execute(  
@@ -31,12 +30,18 @@ session_start();
                      )  
                 );  
                 
-                $count = $statement->rowCount();  
-                if($count > 0 && password_verify($password, $hashed_password))  
+                $count = $statement->rowCount();
+                $hash_pwd = $count['password'];
+               $hash = password_verify($password, $hash_pwd);
+
+               if ($hash_pwd == 0) {
+                    header("location: login.php?error=empty");
+               }  
+                if($count > 0)  
                 {  
                    
                      $_SESSION["username"] = $_POST["username"];  
-                     header("location: welcome.php");  
+                     header("Location: welcome.php");  
                 }  
                 else  
                 {  

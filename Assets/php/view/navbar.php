@@ -17,7 +17,9 @@ if(isset($_POST['logout'])){
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1c8661e552.js" crossorigin="anonymous"></script>
     <link href="../../css/navbar.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
 </head>
    <header>
@@ -26,7 +28,7 @@ if(isset($_POST['logout'])){
        <nav>
         <!--test hamburger-->
           <a href="../../php/model/welcome.php">
-            <img id ="logo" src="../../images/logoblue.svg" alt="Logo">
+            <img id="logo" src="../../images/logowhite.svg" alt="Logo">
           </a>
         <!-- START SESSION & LOG OUT-->
           <form action="../model/login.php" method="post">
@@ -50,7 +52,7 @@ if(isset($_POST['logout'])){
            <li><a href="../view/map.php">Find your trail</a></li>
            <li><a href="https://www.tripadvisor.com/Attractions-g186485-Activities-c61-t87-Scotland.html">Plan your trip</a></li>
            <li><a href="#">Contact us</a></li>
-           <form method="post" name="logout"><li><input id="logout" type="submit" name="logout" value="Log me out"></li> </form>
+           <form method="post" name="logout"><li><input id="logout" type="submit" name="logout" value="Log me out"><span class="glyphicon glyphicon-log-out"></span></li> </form>
          </ul>
        </nav> 
                <!--test hamburger-->

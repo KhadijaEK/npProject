@@ -8,6 +8,7 @@ html, body{
     font-family: 'Roboto', sans-serif;
 }
 
+
 #fullpage{
     height: 100vh;
     overflow: hidden;
@@ -18,7 +19,7 @@ html, body{
 }
 
 #fullpage section:nth-child(1){
-    background: url('../images/mat-reding-o95TQazzaOg-unsplash.jpg');
+    background-image: url('../images/gary-ellis-zxyOtcGf790-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -141,7 +142,7 @@ p {
 }
 
 .findbtn:hover{
-    background-color: #8ee4af;
+    background-color:#05386b;;
     border: transparent;
     outline: none;
 }
@@ -156,7 +157,7 @@ p {
 }
 
 .stars-ratingBox{
-    background-color:#05386b;
+    background-color: #edf5e1;
     border-radius: 7px;
     font-weight: 600;
     height: 60px;
@@ -168,7 +169,7 @@ p {
 }
 
 .star-text{
-    color: #ffffff;
+    color: #05386b;
     position: relative;
     display: inline-flex;
     padding-left: 25px;
@@ -196,22 +197,22 @@ p {
     display: flex;
 }
 .comment-wrap{
-    background-color: #ffffff;
+    background-color: #05386b;
     border-radius: 3%;
 
     flex-direction: row;
-    height: 200px;
+    height: 144px;
     justify-content: space-around;
     margin: 20px;
     overflow: hidden;
     padding: 20px;
     position: relative;
-    width: 300px;
+    width: 277px;
 
 }
 
 h4{
-    color: #05386b;
+    color: #ffffff;
     font-size: 10pt;
     margin-left: 6em;
 }

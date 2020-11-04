@@ -4,13 +4,14 @@
   box-sizing: 0;
 }
 /* Logo & sessionn */
+
+
+
 form{
   display: inline-block;
 }
 
 #logo{
-  width: 30%;
-  height: 30%;
   position: absolute;
   top: 2%;
   left: 2%;
@@ -34,8 +35,10 @@ form{
 /* Navbar & hamburger */
 nav{
   height: 10vh;
+  width: 100%;
   z-index: 10;
   display: inline-block;
+  background: #4D774E;
 }
 
 .nav-links {
@@ -60,10 +63,9 @@ nav{
   .line{
     width: 34px;
     height: 5px;
-    background: black;
+    background: #ffffff;
     border-radius: 5px;
     margin: 5px;
-    
   }
 
   .hamburger {
@@ -73,6 +75,7 @@ nav{
     top: 5%;
     transform: translate(-5%, -50%);
     z-index: 1;
+    background-color: #9DC88D;
   }
 
   nav{
@@ -85,7 +88,7 @@ nav{
     position: fixed;
     right: 0;
     top: 0;
-    background:#5cdb95;
+    background:#9DC88D;
     font-weight: 800;
     height: 100vh;
     width: 35%;

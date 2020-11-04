@@ -3,11 +3,11 @@
  
  if(isset($_SESSION["username"]))  
  {  
-      echo '<h3>Login Success, Welcome - '.$_SESSION["username"].'</h3>';  
-      echo '<br /><br /><a href="logout.php">Logout</a>';  
+      echo '<p>Welcome - '.$_SESSION["username"].'</p>';  
+      echo '<br /><form method="POST" name="logout"><a href="./logout.php">Logout</a><span class="glyphicon glyphicon-log-out"></span></form>';  
  }  
  else  
  {  
-      header("location: login.php");  
+      header("Location: login.php");  
  }  
  ?>  

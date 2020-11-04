@@ -55,9 +55,9 @@
                   <img class="profile-picture" src="../../images/image-colton.jpg" alt="Colton Smith picture">
                   <h4 class="comment-title">Colton Smith</h4>
                   <h5>Verified Hiker</h5>
-                  <p class="comment-text"> "We needed the same printed design as the one we had ordered a week prior.
-                    Not only did they find the original order, but we also received it in time.
-                    Excellent!"</p>
+                  <p class="comment-text"> "Lovely trail, not too difficult and not too many people.
+                    Just make sure you take the full loop as halfway you could easily take the path 
+                    back to the starting point."</p>
               </div>
               <div class="comment-wrap level2">
                   <img class="profile-picture" src="../../images/image-irene.jpg" alt="Irene Roberts picture">
