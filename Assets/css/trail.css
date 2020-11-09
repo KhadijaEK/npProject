@@ -4,10 +4,125 @@
     box-sizing: border-box;
   }
 
+  body{
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h1{
+    font-size: 34px;
+    font-family: 'Oswald', sans-serif;
+    color: #ffff;
+    position: absolute;
+    top: 60%;
+    left: 16px;
+    z-index: 200;
+  }
+
+  
+  #main-container-trail{
+    height: 90vh;
+    overflow: hidden;
+    background: yellow;
+    
+  }
+
+  #main-container-trail section:nth-child(3){
+    background: #05386b;
+}
 
 .trail-right-container{
-    position: absolute;
-    right: 5%;
-    z-index: -100;
+  position: absolute;
+  right: 4%;
+  top: 9%;
+
+  z-index: 100;
+  background-color: white ;
+  padding: 30pxs;
+ 
+}
+.trail-picture{
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+
+
+/* comment section */
+
+.comment-container{
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 3%;
+  width: 435px;
+  z-index: 400;
+  background-color: tomato;
+  margin-top: 20px;
+}
+textarea{
+  background-color: #ffffff;
+  width: 435px;
+  height: auto;
+  resize: none;
+  font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    border: 1px solid #cccccc;
+
+    margin-top: 10px;
+}
+
+textarea:focus{
+  border: none;
+}
+
+.write_comment_btn{
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  color: #164A41;
+  cursor: pointer;
+  height: 34px;
+  font-size: 13px;
+  font-weight: 600;
+  left: 85%;
+  top: 10%;
+  margin-right: -50%;
+  position: absolute;  
+  width: 55px;
+  padding: 5px;
+  
+}
+.comment-box{
+  display: block;
+    width: 400px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 0 auto;
+    color: #515151;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
     
 }
+
+/* Edit & Delete comment btn */
+.btn{
+  display: block;
+  border: none;
+  float: right;
+  background: none;
+  border: none;
+  padding-left: 13px;
+  cursor: pointer;
+  top: 2%;
+  opacity: 0.5;
+}
+
+.btn:hover{
+  opacity:1;
+}
+
+
+

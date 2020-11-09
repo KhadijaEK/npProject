@@ -3,8 +3,8 @@
  
  if(isset($_SESSION["username"]))  
  {  
-      echo '<p>Welcome - '.$_SESSION["username"].'</p>';  
-      echo '<br /><form method="POST" name="logout"><a href="./logout.php">Logout</a><span class="glyphicon glyphicon-log-out"></span></form>';  
+      echo '<p class="session">Welcome, '.$_SESSION["username"].'</p>';  
+      echo '<a href="./logout.php">Logout</a>';  
  }  
  else  
  {  

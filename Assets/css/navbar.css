@@ -3,22 +3,30 @@
   padding: 0;
   box-sizing: 0;
 }
-/* Logo & sessionn */
+/* Logo & session */
 
-
-
-form{
-  display: inline-block;
-}
 
 #logo{
+  height: 89px; 
+  width: 89px;
   position: absolute;
-  top: 2%;
-  left: 2%;
+  float: left;
+  top: -10px;
 }
 
+.session{
+  color:#164A41;
+  position: absolute;
+  font-size: 13px;
+  right: 20%;
+  top:5%;
+  margin: 0;
+  padding:0;
+}
+
+/* logout button */
 #logout{
-  color: rgb(49, 49, 49);
+  color:#164A41;
   text-decoration: none;
   font-size: 18px;
   font-family:'Roboto', sans-serif;
@@ -28,23 +36,32 @@ form{
   font-weight: 700;
 }
 
-#logout:hover{
+#logout:hover, #logout:focus{
   border: transparent;
+  outline: none;
 }
 
-/* Navbar & hamburger */
-nav{
-  height: 10vh;
+
+/* Navbar */
+
+.nav-container{
+  
+  float: left;
+  overflow: hidden;
+  position: absolute;
+  height: 55px;
   width: 100%;
-  z-index: 10;
-  display: inline-block;
-  background: #4D774E;
+  z-index: 100;
+}
+
+nav:hover{
+  background: #9DC88D;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   margin-left: auto; /* automatiquement envoit la div à droite... */
 }
@@ -56,84 +73,125 @@ nav{
   font-family:'Roboto', sans-serif;
 }
 
-/* Responsive */
-@media screen and (max-width:1980px)
-{
 
-  .line{
-    width: 34px;
-    height: 5px;
-    background: #ffffff;
-    border-radius: 5px;
-    margin: 5px;
+
+ 
+
+/* hamburger animation cross */
+
+  .menu-btn{
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all .5s ease-in-out; 
+    z-index: 1000;
   }
 
-  .hamburger {
+  .menu-btn__hamburger{
+    width: 30px;
+    height: 3px;
+    background: #164A41;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;  
+    z-index: 1000;
     position: fixed;
     cursor: pointer;
-    right: 3%;
+    right: 1%;
     top: 5%;
     transform: translate(-5%, -50%);
-    z-index: 1;
-    background-color: #9DC88D;
-  }
+    }
+
+    .menu-btn__hamburger:before, .menu-btn__hamburger:after{
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background: #164A41;
+      border-radius: 5px;
+      transition: all .5s ease-in-out; 
+    }
+
+    .menu-btn__hamburger::before{
+      transform: translateY(-8px);
+    }
+    .menu-btn__hamburger::after{
+      transform: translateY(8px);
+    }
+
+    .menu-btn.open .menu-btn__hamburger{
+      transform: translateX(-50px);
+      background: transparent;
+      border: transparent;
+      }
+
+    .menu-btn.open .menu-btn__hamburger::before{
+      transform: rotate(45deg) translate(35px, -35px);
+      }
+    .menu-btn.open .menu-btn__hamburger::after{
+      transform: rotate(-45deg) translate(35px, 35px);
+      }
+
+
+    .nav-links {
+      position: fixed;
+      right: 0;
+      top: 0;
+      background:#9DC88D;
+      font-weight: 800;
+      height: 100vh;
+      width: 35%;
+      flex-direction: column;
+      /* create a mask to hide & for better support make sure to ass webkit */
+      clip-path: circle(0px at 90% -10%);
+      -webkit-clip-path: circle(0px at 90% -10%);
+      transition: all 1s ease-out;
+    }
+    .nav-links.open{
+      clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(1000px at 90% -10%);
+      pointer-events: all;
+      height: 100vh;
+      width: 35%;
+    }
+
+
+    .nav-links li{
+      opacity: 0;
+    }
+    
+    .nav-links li:nth-child(1){
+      transition: all 0.5s ease 0.1s;
+    }
+    .nav-links li:nth-child(2){
+      transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(3){
+      transition: all 0.5s ease 0.3s;
+    }
+    .nav-links li:nth-child(4){
+      transition: all 0.5s ease 0.4s;
+    }
+  
+    li.fade{
+      opacity: 1;
+    }
+
+
+@media screen and (max-width:750px){
 
   nav{
     position: relative;
     z-index: 100;
-  }
-
-
-  .nav-links {
-    position: fixed;
-    right: 0;
-    top: 0;
-    background:#9DC88D;
-    font-weight: 800;
-    height: 100vh;
-    width: 35%;
-    flex-direction: column;
-    /* create a mask to hide & for better support make sure to ass webkit */
-    clip-path: circle(0px at 90% -10%);
-    -webkit-clip-path: circle(0px at 90% -10%);
-    transition: all 1s ease-out;
   }
   .nav-links.open{
     clip-path: circle(1000px at 90% -10%);
     -webkit-clip-path: circle(1000px at 90% -10%);
     pointer-events: all;
     height: 100vh;
-    width: 35%;
+    width: 100%;
   }
-
-  .hamburger.open{
-    position: absolute;
-    right: 12%;
-  }
-
-  .nav-links li{
-    opacity: 0;
-  }
-  
-  .nav-links li:nth-child(1){
-    transition: all 0.5s ease 0.1s;
-  }
-  .nav-links li:nth-child(2){
-    transition: all 0.5s ease 0.2s;
-  }
-  .nav-links li:nth-child(3){
-    transition: all 0.5s ease 0.3s;
-  }
-  .nav-links li:nth-child(4){
-    transition: all 0.5s ease 0.4s;
-  }
- 
-  li.fade{
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width:750px){
 
   .nav-links {
     position: fixed;

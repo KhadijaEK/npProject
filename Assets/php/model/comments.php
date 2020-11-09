@@ -17,21 +17,26 @@ function setComments($db) {
 }
 
 function getComments($db){
-    $sql = "SELECT * FROM comments";
+    $sql = "SELECT * FROM comments ORDER BY date DESC LIMIT 0,10";
     $results = $db->query($sql);
     while ($row = $results->fetch(PDO::FETCH_ASSOC))
     {
-        echo"<div class='comment-box'><p>";
+        echo"<div class='comment-box'>";
         echo $row['userid']."<br>";
         echo $row['date']."<br>";
         echo $row['comment'];
-        echo"</p>
+        echo"
+            
+            <form class='delete-form' method='POST' action='".deleteComments($db)."'>
+                <input type='hidden' name='commentid' value='".$row['commentid']."'>
+                <button class='btn' name='commentDelete' type='submit'><i class='fa fa-trash' aria-hidden='true'></i></button>
+            </form>
             <form class='edit-form' method='POST' action='editComments.php'>
                 <input type='hidden' name='commentid' value='".$row['commentid']."'>
-                <input type='hidden' name='userid' value='".$row['userid']."'>
+                <input style='font-weigth: bold' type='hidden' name='userid' value='".$row['userid']."'>
                 <input type='hidden' name='date' value='".$row['date']."'>
                 <input type='hidden' name='comment' value='".$row['comment']."'>
-                <button>Edit</button>
+                <button class='btn'><i class='fas fa-edit'></i></button> 
             </form>
         </div>";
     }
@@ -47,5 +52,14 @@ function editComments($db) {
         $sql = "UPDATE comments SET comment='$comment' WHERE commentid='$commentid'";
         $results = $db->query($sql);
         header('Location: lochness.php');
+    }
+}
+
+function deleteComments($db){
+    if(isset($_POST['commentDelete'])){
+        $commentid = $_POST['commentid'];
+        $sql = "DELETE FROM comments WHERE commentid='$commentid'";
+        $results = $db->query($sql);
+        
     }
 }

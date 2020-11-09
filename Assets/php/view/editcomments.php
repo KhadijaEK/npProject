@@ -23,10 +23,7 @@
 
         <div class="main-container-trail">
             <h1>Edit comment</h1>
-            <div id="output"></div>
-
         </div>
-
 
         <!--Comment section-->
         <div class="comment-container">

@@ -24,9 +24,6 @@ session_start();
                      array(  
                           'username'     =>     $_POST["username"],
                           'password'     =>     $_POST["password"]
-                          
-                          
-                         
                      )  
                 );  
                 
@@ -64,7 +61,7 @@ session_start();
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-
+           <link rel="stylesheet" src="../../css/styles.css">
     </head>
     <body>
     <div class="container" style="width:500px;">  
@@ -80,8 +77,9 @@ session_start();
             <input type="text" id="username" class="form-control" name="username" placeholder="Username" required><br>
             <label for="password">Password</label>
             <input type="password" id="password"  class="form-control" name="password" placeholder="Password" required><br>
-            <span>Forgot?</span>
+            <span><a href="forgot-password.php">Forgot password?</a></span>
             <input type="submit" class="btn btn-info" name="login-btn" value="Login">
+            <button type="button" class="btn btn-warning cancelbtn">Cancel</button>
         </form>
             <p>Not registered yet? <a href="../../php/view/signup.php">Sign up</a></p>
     </div>

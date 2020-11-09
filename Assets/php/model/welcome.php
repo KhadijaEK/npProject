@@ -5,14 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to hike in Scotland!</title>
-    <link rel="stylesheet" href="../../css/welcome.css">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../../css/welcome.css" rel="stylesheet" >
+  
+   
 </head>
-<body>
-    
-    <?php include('../view/navbar.php') ?>
 
+<body>
+    <header>
+      <!--Code to include navbar-->
+      <?php include("./../view/navbar.php"); ?>
+      <style><?php include("../../css/navbar.css"); ?></style>
+      <!--END OF Code to include navbar-->
+    </header>
         <!--Start of content-->
   <div id="fullpage">
     <section>
@@ -79,24 +85,29 @@
       </div>
     </section>
 
-    <section><h1>Section2</h1></section>
+    <section><h1>Section2</h1>
+  
+    </section>
   </div>
+  
 
 
-    <!--Scripts-->
-    <script src="../../js/menu.js" async="false"></script>
+   
+    
+    <script src="../../js/navbar.js"></script>
+    <script src="https://kit.fontawesome.com/1c8661e552.js" crossorigin="anonymous"></script>
+    <!--End scripts all pages-->
+    
 
-    <!--Scroll down jquery plugin-->
-    <script
-    src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js" integrity="sha512-qH+R6YL4/40iiIrnN5aNZ1sEeEalNAdnzP9jfsxFPBdIslTkwUddkSazjVWhJ3f/3Y26QF6aql0xeneuVw0h/Q==" crossorigin="anonymous"></script>
-    <script src="../../js/jquery.fullpage.min.js"></script>
+  
+  
+  
+    <script src="//code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script src='./../../js/jquery.fullpage.min.js'></script>
     <script type="text/javascript">
-        FastClick.attach(document.body);
-        $('#fullpage').fullpage();
+      $('#fullpage').fullpage();
     </script>
+    
 
   </body>
 </html>

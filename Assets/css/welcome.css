@@ -1,27 +1,25 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: 0;
   }
-
-html, body{
-    font-family: 'Roboto', sans-serif;
-}
 
 
 #fullpage{
     height: 100vh;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 #fullpage section{
     height: 100vh;
-}
+}   
 
 #fullpage section:nth-child(1){
-    background-image: url('../images/gary-ellis-zxyOtcGf790-unsplash.jpg');
+    background-image: url('../images/damien-ramage-u6HkTQTHIwM-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 #fullpage section:nth-child(2){
@@ -30,13 +28,12 @@ html, body{
 
 
 .container{
-   
     margin: 0 auto;
-    overflow: hidden;  
+    overflow: hidden;
     padding: 30px;
     position: relative;  
-    height: 100vh;
-    width: 90%;
+    top:10%;
+    left: 50%;
 }
 
 #container-top{
@@ -101,7 +98,7 @@ html, body{
 .headtitle{
   
     height: auto;
-    overflow: hidden;
+    
     padding: 5px;
     width: 500px;
 }
