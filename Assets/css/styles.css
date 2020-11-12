@@ -43,32 +43,35 @@ table {
 
 /* colors : dark blue: #33697B - dark pink: #FC8585 - soft pink: #FC9885 */
 
+
 /* Landing page */
 #logo{
     height: 30%;
     width: 30%;
-    position: absolute;
-    left: 10%;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 .landingpage {
     background: url("../images/joshua-earle-wFWQmOyfkkM-unsplash.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100vh;
 }
 /* Discover your next hike in Scotland */
 
 .titlecontainer{
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);   
-        text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);   
+    text-align: center;
 }
 
 h1{
@@ -76,7 +79,6 @@ h1{
     font-family: 'Oswald', serif;    
     font-weight: 800;
     font-size: 55px;
-  
     margin: 0 auto;
     text-align: center;
 }
@@ -89,6 +91,8 @@ h2{
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
+
+
 
 /* Landpage Find a walk - flip button*/
 
@@ -103,37 +107,183 @@ h2{
     height: 34px;
     font-size: 13px;
     font-weight: 700;
-    left: 50%;
-    margin-right: -50%;
-    position: absolute;
-    top: 60%;
-    transform: translate(-50%, -50%);  
     width: 144px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .findbtn:hover{
-  
     background-color: #F1B24A;
     border: transparent;
     outline: none;
 }
 
-/* Sign in */
-.signin {
-    background-color: transparent;
-    border: transparent;
-    color:  #33697B ;
-    cursor: pointer;
-    float: right;
-    font-weight: 600;
-    outline: none;
-    padding-right: 5%;
-    position: relative;
+
+/* LOGIN PAGE */
+
+#error{
+    display: none;
 }
 
-.signin:hover{
-    color: white;
-    background-color: transparent;
-    border: transparent;
-    outline: none;
+#login{
+    background-image: url('../images/rob-walsh-ZRUQ08NDYeo-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
 }
+#signup{
+    background-image: url('../images/gary-ellis-zxyOtcGf790-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+
+
+
+
+.login-form{
+background-color:#ffffff;
+border-radius: 20px;
+padding: 5vh;
+position: absolute; 
+right: 8%; 
+font-family: 'Roboto', sans-serif;
+}
+
+.signup-form{
+background-color:#ffffff;
+border-radius: 20px;
+padding: 5vh;
+position: absolute;
+left: 10%; 
+font-family: 'Roboto', sans-serif;
+
+}
+
+.login-title{
+    color: #164A41;
+    font-size: 34px;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+}
+
+.form-group{
+background-color: none;
+border: none;
+display: block;
+height: auto;
+font-size: 16px;
+line-height: 1.5;
+margin: 0 auto;
+font-family: 'Roboto', sans-serif;
+overflow: hidden;
+
+}
+
+.form-group .item{
+align-items: center; /* align center + display + position*/
+background-color: rgb(236, 234, 234);  
+display: block;
+margin: 0 auto;
+position: relative;
+}
+
+legend{
+font-size: 34px;
+font-weight: bold;
+text-align: center; 
+
+}
+
+label{
+align-items: center;
+color: #515151;
+display: block;
+font-size: 13px;
+font-weight: 700;
+padding-bottom: 5px;
+padding-top: 21px;
+position: relative;
+width: 377px;
+}
+
+a.forgot-pwd{
+    color: #4D774E;
+    position: relative;
+    margin: 0;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+*:focus {
+outline: none;
+}
+
+
+/* password & icon */
+.toggle{
+display:none;
+}
+
+span[toggle="password-field"]{
+position: absolute;
+left: 85%;
+top: 60%;
+z-index: 10;
+}
+
+
+/* buttons */
+.btn.btn-warning, .btn.btn-info{
+padding: 10px 40px;
+}
+
+.btn.btn-info{
+    border: 2px solid #9DC88D;
+    color: #9DC88D;
+    background-color: transparent;
+}
+
+.btn.btn-warning:hover, .btn.btn-warning:focus{
+    background: #4D774E;
+    border: 2px solid #4D774E;
+    border: none;
+    outline:none;
+}
+.btn.btn-info:hover{
+    background: #9DC88D;
+    border: 2px solid #9DC88D;
+    color: #ffffff;
+    border: none;
+   
+}
+
+/* Responsive forms */
+
+@media only screen and (max-width:768px) and (min-width:200px){
+    
+    #login.login-container{
+        background-color: #ffffff; 
+        position: relative;
+        margin: 13px;
+    }
+    
+    .login-form{
+        height: 100vh;
+        width: 60vh;
+        display: flex;
+        flex-direction: column;
+       
+        }
+
+        .btn.btn-warning, .btn.btn-info{
+            margin: 13px;
+        }
+}
+

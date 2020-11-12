@@ -4,50 +4,117 @@
     box-sizing: border-box;
   }
 
-  body{
-    font-family: 'Roboto', sans-serif;
-  }
 
-  h1{
+/* section scroll */
+#fullpage{
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+#fullpage section{
+  height: 100vh;
+  overflow: hidden;
+}   
+
+#fullpage section:nth-child(1){
+  background-color: #cccccc;
+  
+}
+
+#fullpage section:nth-child(2){
+  background: none;
+
+}
+
+/* MAP Os API */
+
+#map {
+  padding: 0;
+  margin: 0;
+  height: 500px;
+  width: 500px;
+}
+
+#logo{
+  z-index: 400;
+} 
+
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 15px;
+
+  position: absolute;
+  left: 5%;
+  right: 5%;
+
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.gallery__item--title{
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 2;
+
     font-size: 34px;
     font-family: 'Oswald', sans-serif;
-    color: #ffff;
-    position: absolute;
-    top: 60%;
-    left: 16px;
-    z-index: 200;
-  }
-
+    color: #164A41;
   
-  #main-container-trail{
-    height: 90vh;
-    overflow: hidden;
-    background: yellow;
-    
-  }
-
-  #main-container-trail section:nth-child(3){
-    background: #05386b;
 }
 
-.trail-right-container{
-  position: absolute;
-  right: 4%;
-  top: 9%;
-
-  z-index: 100;
-  background-color: white ;
-  padding: 30pxs;
- 
+.gallery__item--intro{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 8;
+  
+    font-family: 'Roboto', sans-serif;    
+    color: #515151;
+    font-weight: 500;
+    font-size: 11px;
+    background: #ffffff;
+    padding: 10px;
+    position: relative;
+    opacity: 0.7;
 }
-.trail-picture{
-  width: 70%;
-  height: 100%;
-  margin: 0 auto;
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
 }
 
+.gallery__item--2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+.gallery__item--3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 3;
+  grid-row-end: 9;
+}
 
-
+.gallery__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
 
 /* comment section */
 
@@ -56,11 +123,13 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 3%;
+  left: 3%;
   width: 435px;
+  height: 400px;
+  overflow: scroll;
   z-index: 400;
   background-color: tomato;
-  margin-top: 20px;
+
 }
 textarea{
   background-color: #ffffff;

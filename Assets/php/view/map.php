@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find a Walk</title>
-    <link href="../../css/map.css" rel="stylesheet">
+    <link href="../../css/map.css?v=<?php echo time(); ?>" rel="stylesheet">
     
     
 </head>
@@ -19,10 +19,10 @@
   </header>
    
         <div class="main map-container">
-          <h2>Click on the map to find your next hike</h1>
-          <h2>Or search by Region</h2>
-          <section class="left-container">
+          <section class="map-left-container">
+            <h2>Click on the map to find your next hike</h1>
             <div class="dropdown">
+              <h3>Or search by Region</h2>
               <button class="dropbtn">Highlands<i class="arrow"></i></button>
               <div class="dropdown-content">
                 <a href="#">AberdeenShire</a>
@@ -53,7 +53,6 @@
           </section>
           <!--SVG responsive map-->
           <section class="right-container">
-
                 <svg
                   xmlns:dc="http://purl.org/dc/elements/1.1/"
                   xmlns:cc="http://creativecommons.org/ns#"
@@ -63,8 +62,8 @@
                   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
                   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
                   version="1.1"
-                  width="1023"
-                  height="1340"
+                  width="500"
+                  height="1000"
                   viewbox="500 200 10 2000"
                   id="svg2"
                   inkscape:version="0.48.1 "

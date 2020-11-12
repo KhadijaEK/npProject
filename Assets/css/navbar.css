@@ -6,20 +6,21 @@
 /* Logo & session */
 
 
+
 #logo{
   height: 89px; 
   width: 89px;
-  position: absolute;
+  position: relative;
   float: left;
   top: -10px;
 }
 
-.session{
+span.session{
   color:#164A41;
   position: absolute;
   font-size: 13px;
-  right: 20%;
-  top:5%;
+  right: 10%;
+  top: 10%;
   margin: 0;
   padding:0;
 }
@@ -47,7 +48,6 @@
 .nav-container{
   
   float: left;
-  overflow: hidden;
   position: absolute;
   height: 55px;
   width: 100%;
@@ -83,6 +83,11 @@ nav:hover{
     cursor: pointer;
     display: flex;
     position: absolute;
+    width: 80px;
+    height: 80px;
+    border: none;
+    outline: none;
+    background: transparent;
     right: 0;
     top: 0;
     transition: all .5s ease-in-out; 

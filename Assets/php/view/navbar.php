@@ -1,25 +1,33 @@
+<?php
+    require_once('../config/config.php');
 
+    // If you are not logged, redirects to login page.
+    $session = new USER();
+    if(!$session->is_loggedin()) {
+        $session->redirect('/index.html');
+    }
+
+    $auth_user = new USER();
+    $user_id = $_SESSION['user_session'];
+    $stmt = $auth_user->runQuery("SELECT * FROM users WHERE id=:user_id");
+    $stmt->execute(array(":user_id"=>$user_id));
+    $userRow = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
 
        <nav>
         <div class="nav-container">
-        <?php
-        session_start();
-        if(isset($_POST['logout'])){
-          session_start();
-          session_destroy();
-          header('location: http://becode.ke.online/npProject/index.html');
-        }
-      ?>
+        <!--loggedin-->
+        <div class="container">
+            <h1>Hello, <?php echo $userRow['username'];?>! - <a href="../model/logoutfinal.php">Logout</a></h1>
+            <hr/>
+            <p>This is the user area, this content is private.</p>
+        </div>
+
         <!--test hamburger-->
-          <a href="../../php/model/welcome.php">
-            <img id="logo" src="../../images/logocolor.svg" alt="Logo">
+          <a href="../../php/model/welcomefinal.php">
+            <img id="logo" src="../../images/logocolor.png" alt="Logo">
           </a>
-        <!-- START SESSION & LOG OUT-->
-          <form action="../model/login.php" method="post">
-            <?php include('../model/login_success.php')
-            ?>
-          </form> 
-       <!-- START SESSION & LOG OUT-->
+  
         </div>
        <!--Hamburger and slide bar-->
        <div class="menu-btn">
@@ -29,7 +37,7 @@
                     <li><a href="../view/map.php">Find your trail</a></li>
                     <li><a href="https://www.tripadvisor.com/Attractions-g186485-Activities-c61-t87-Scotland.html">Plan your trip</a></li>
                     <li><a href="#">Contact us</a></li>
-                    <form method="post" name="logout"><li><span class="glyphicon glyphicon-log-out"></span><input id="logout" type="submit" name="logout" value="Log me out"></li> </form>
+                    <li><span class="glyphicon glyphicon-log-out"></span><input id="logout" type="submit" name="logout" value="Log me out"></li>
                 </ul>
         </div>
        </nav> 
