@@ -52,9 +52,34 @@ h2{
 
 
 
-.findbtn{
+.signinbtn{
     background-color: transparent;
-    border: 3px solid #F1B24A;
+    border: 3px solid#ffffff;
+    border-radius: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    height: 34px;
+    font-size: 13px;
+    font-weight: 700;
+    width: 144px;
+    top: 70%;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+
+}
+
+.signinbtn:hover{
+    background-color: #ffffff;
+    border: transparent;
+    color:#F1B24A;
+    outline: none;
+}
+
+.signupbtn{
+    background-color: #F1B24A;
     border-radius: 20px;
     color: white;
     cursor: pointer;
@@ -70,13 +95,6 @@ h2{
     margin-top: 3vh;
 
 }
-
-.findbtn:hover{
-    background-color: #F1B24A;
-    border: transparent;
-    outline: none;
-}
-
 
 /* LOGIN PAGE  2 columns */
 

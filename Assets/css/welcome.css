@@ -22,10 +22,7 @@
     
 }
 
-#fullpage section:nth-child(2){
-    background: #cccccc;
 
-}
 
 
 .container{    
@@ -90,7 +87,7 @@ p {
 }
 
 .findbtn:hover{
-    background-color:#9DC88D;;
+    background-color:#164A41;;
     border: transparent;
     outline: none;
 }

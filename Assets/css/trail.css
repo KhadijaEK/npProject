@@ -19,11 +19,12 @@
 
 #fullpage section:nth-child(1){
   background-color: #ffffff;
+  
 } 
 
 #fullpage section:nth-child(2){
   background: none;
-
+  position: relative;
 }
 
 /* MAP Os API */

@@ -71,10 +71,16 @@ nav{
 
 i[class^="fa"]{
   padding-right: 0.8em;
-  color: #ffffff; 
 }
 
+.fa-home, .fa-search-location, .fa-plane,
+.fa-envelope{
+  color: #ffffff;
+}
 
+.fa-sign-out-alt{
+  color: #164A41;
+}
 
 /* hamburger animation cross */
 
