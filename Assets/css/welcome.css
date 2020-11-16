@@ -33,7 +33,8 @@
     margin: 0 auto;
     position: relative;  
     top: 10%;
-    width: 80%;
+    width: 90%;
+    height: 500px;
 }
 
 #container-top{
@@ -43,7 +44,7 @@
 
     position: relative;
     display: flex;
-    left: 5%;
+    left: 10%;
 }
 
 
@@ -52,7 +53,7 @@
     height: auto;
     color: #ffffff;
     padding-left: 25px;
-    padding-top: 150px;
+    padding-top: 130px;
     width: 500px;
 }
 
@@ -104,13 +105,14 @@ p {
 }
 
 .stars-ratingBox{
-    background-color:#4D774E;
+    background-color:#164A41;
     border-radius: 7px;
     font-weight: 700;
     height: 60px;
     margin: 15px;
     padding-left: 5%;
     position: relative;
+    top: 40%;
     width: 377px;
 
 }
@@ -129,34 +131,7 @@ p {
 .space3{left: 40px;}
 
 
-#container-bottom{
-   
-    height: 250px;
-    margin: 0 60px;
-    overflow: hidden;
-    float: right;
-    position: relative;
-    right: 0;
-    
-}
 
-.comment-mainbox{
-    display: flex;
-}
-.comment-wrap{
-    background-color: #4D774E;
-    border-radius: 3%;
-
-    flex-direction: row;
-    height: 144px;
-    justify-content: space-around;
-    margin: 20px;
-    overflow: hidden;
-    padding: 20px;
-    position: relative;
-    width: 277px;
-
-}
 
 h4{
     color: #ffffff;

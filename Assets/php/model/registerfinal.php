@@ -52,29 +52,105 @@
     }
 ?>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Register Final</title>
-        <link href="assets/styles.css" rel="stylesheet">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register form</title>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link href="../../css/styles.css?v=<?php echo time(); ?>" rel="stylesheet">
+          
+</head>
+
+
     <body>
-        <div class="container">
-            <h1>Register or <a href="loginfinal.php">Login final</a></h1>
-            <hr/>
-            <?php
-                if(isset($error)) {
-                    foreach($error as $error) {
-                        echo "<p class='error'>$error</p>";
+        
+        <div class="row">
+            <div  id="signup" class="column left">
+            <img id="logo" src="../../images/logocolor.png" alt="logo">
+            </div>
+            
+            
+            <div class="login-container column right">
+            
+                
+                <?php
+                    if(isset($error)) {
+                        foreach($error as $error) {
+                            echo "<p class='error'>$error</p>";
+                        }
                     }
+                ?>
+                <form method="post" class="login-form">
+                <h2 class="login-title">Register</h2>
+                    <input type="text" name="txt_uname" placeholder="Username" value="<?php if(isset($error)){echo $uname;}?>" />
+                    <input type="text" name="txt_umail" placeholder="Email" value="<?php if(isset($error)){echo $umail;}?>" />
+                    <input id="password" type="password" name="txt_upass" placeholder="Password" />
+                    <!-- An element to toggle between password visibility -->
+                    <span toggle="signuptoggle" class="fa fa-fw fa-eye fa-1x field_icon toggle-password " onclick="showPassword()"></span>
+                    
+                    <input id="confirm_password" class="form-control " type="password" name="confirm_pw" placeholder="Confirm password" required onChange="checkPasswordMatch();">
+                    <div id="checkmatch"></div>
+                    
+
+                    <button  class="btn btn-info" type="submit" name="btn-signup">Register</button>
+                    <label>Already registered? <a href="loginfinal.php">Sign in</a></Label>
+                </form>
+            </div>
+                </div>
+
+        <!-- ALL JS FILES -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- ALL PLUGINS -->
+ <!--dans l'ordre les scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="../../js/form.js"></script>
+<script src="js/form-validator.min.js"></script>
+<script src="js/contact-form-script.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+        <!--check matching password-->
+        <script>
+                    function checkPasswordMatch() {
+                            let password = $("#password").val();
+                            let confirmPassword = $("#confirm_password").val();
+
+                            if (password != confirmPassword)
+                            $("#checkmatch").html("<span style='color:red'>Passwords do not match!</span>");
+
+                            else
+                                $("#checkmatch").html("<span style='color:green'>Passwords match.</span>");
+                        }
+
+                        $(document).ready(function () {
+                        $("#confirm_password").keyup(checkPasswordMatch);
+                        });
+                        
+        </script>
+        </script>
+        <!--Javascript for check email availability-->
+        <script>
+                function checkEmailAvailability() {
+                    $("#loaderIcon").show();
+                    jQuery.ajax({
+                        url: "/Assets/php/model/check-availability-user.php",
+                        data:'email='+$("#email").val(),
+                        type: "POST",
+                    success:function(data){
+                    $("#email-availability-status").html(data);
+                    $("#loaderIcon").hide();
+                    },
+                        error:function (){
+                        event.preventDefault();
+                        }
+                    });
                 }
-            ?>
-            <form method="post">
-                <input type="text" name="txt_uname" placeholder="Username" value="<?php if(isset($error)){echo $uname;}?>" />
-                <input type="text" name="txt_umail" placeholder="Email" value="<?php if(isset($error)){echo $umail;}?>" />
-                <input type="password" name="txt_upass" placeholder="Password" />
-                <button type="submit" name="btn-signup">Register</button>
-            </form>
-        </div>
+        </script>
     </body>
 </html>

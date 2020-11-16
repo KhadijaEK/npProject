@@ -12,10 +12,9 @@ body{
 }
 
 h2{
-    color:#164A41;
-    font-family: 'Oswald', sans-serif;    
-    font-weight: 600;
     font-size: 34px;
+    font-family: 'Oswald', sans-serif;
+    color: #164A41;
     
     position: relative;
     left: 5%;
@@ -38,10 +37,10 @@ h3{
 
 .map-container{
   width: 70%;
-  height:100%;
+  height:100vh;
   position: relative;
   margin: 0 auto;
- 
+  top: 10%;
   background: white;
   opacity: 0.8;
   overflow: hidden;
@@ -55,7 +54,7 @@ h3{
   flex-direction: column;
   position: absolute;
   right: 15%;
-  top:-10%;
+  top:-8%;
 }
 
 
@@ -87,9 +86,9 @@ path:hover {
 /* Dropdown Button */
 .dropbtn {
     background-color: #ffffff;
-    color: rgb(65, 65, 65);
+    color: #515151;
     padding: 16px 20px;
-    margin: 10px;
+    margin: 8px;
     font-size: 13px;
     border-bottom: 2px solid #F1B24A;
     border-top: none;

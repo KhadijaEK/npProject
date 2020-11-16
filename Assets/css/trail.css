@@ -18,9 +18,8 @@
 }   
 
 #fullpage section:nth-child(1){
-  background-color: #cccccc;
-  
-}
+  background-color: #ffffff;
+} 
 
 #fullpage section:nth-child(2){
   background: none;
@@ -29,19 +28,25 @@
 
 /* MAP Os API */
 
-#map {
-  padding: 0;
-  margin: 0;
-  height: 500px;
-  width: 500px;
-}
 
-#logo{
-  z-index: 400;
-} 
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 300px;
+        width: 400px;
+        position: relative;
+        top: 30%;
+      }
+      .esri-view .esri-view-surface--inset-outline:focus::after {
+        outline: 0 !important;
+      }
+      .esri-ui .esri-attribution {
+        display: none;
+      }
+ 
 
 
-/* Gallery */
+/* Gallery Grid section 1*/
 .gallery {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -50,7 +55,9 @@
 
   position: absolute;
   left: 5%;
+  top: 5%;
   right: 5%;
+  bottom: 10%;
 
 }
 
@@ -73,22 +80,6 @@
   
 }
 
-.gallery__item--intro{
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 6;
-  grid-row-end: 8;
-  
-    font-family: 'Roboto', sans-serif;    
-    color: #515151;
-    font-weight: 500;
-    font-size: 11px;
-    background: #ffffff;
-    padding: 10px;
-    position: relative;
-    opacity: 0.7;
-}
-
 .gallery__item--1 {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -106,31 +97,136 @@
   grid-column-start: 5;
   grid-column-end: 9;
   grid-row-start: 3;
-  grid-row-end: 9;
+  grid-row-end: 8;
 }
 
 .gallery__item--4 {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 5;
+  grid-row-end: 8;
+}
+
+/*  Grid section 2 Map */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 15px;
+
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  right: 5%;
+  bottom: 10%;
+}
+
+.grid__item--map {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 8;
+}
+.grid__item--subtitle {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 2;
+
+
+  color:#F1B24A;
+    font-family: 'Oswald', sans-serif;    
+    font-weight: 500;
+    font-size: 21px;
+    position: relative;
+    margin-top: 35px;
+    text-align: left;
+}
+
+
+.grid__item--intro{
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  font-family: 'Roboto', sans-serif;    
+  color: #515151;
+  font-weight: 500;
+  font-size: 0.85em;
+  line-height: 1.5;
+  text-justify: inter-word;
+  
+}
+
+.grid__item--weather{
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+
+.grid__item--comment{
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 5;
   grid-row-end: 9;
 }
 
+
+/* Weather App section */
+
+.fa-map-marker{
+  color: #515151;
+  padding-right: 5px;
+}
+
+.report-container{
+  display: flex;
+  flex-direction: row;
+  font-family: 'Roboto', sans-serif;
+  color: #515151;
+  font-size: 0.7em;
+  width: 400px;
+}
+
+.weather-icon{
+  position: relative;
+  left: 0px;
+  padding: 0px;
+}
+
+
+
+h4{
+  padding: 0px;
+  color: #515151;
+}
+
+.max-temperature{
+  color: #4D774E;
+  font-size: 16px;
+}
+
+
+
+
 /* comment section */
+
 
 .comment-container{
 
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 3%;
-  width: 435px;
-  height: 400px;
+  display: inline-block;
+  position: relative;
+  height: auto;
+  width: 85%;
+  height: 200px;
   overflow: scroll;
-  z-index: 400;
-  background-color: tomato;
+ 
 
 }
+
 textarea{
   background-color: #ffffff;
   width: 435px;
@@ -139,7 +235,7 @@ textarea{
   font-family: 'Roboto', sans-serif;
     padding: 10px;
     border: 1px solid #cccccc;
-
+  outline: none;
     margin-top: 10px;
 }
 
@@ -156,8 +252,7 @@ textarea:focus{
   height: 34px;
   font-size: 13px;
   font-weight: 600;
-  left: 85%;
-  top: 10%;
+  left: 80%;
   margin-right: -50%;
   position: absolute;  
   width: 55px;
@@ -173,6 +268,7 @@ textarea:focus{
     color: #515151;
     font-size: 13px;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
     
 }
 

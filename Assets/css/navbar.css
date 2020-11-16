@@ -5,7 +5,11 @@
 }
 /* Logo & session */
 
-
+.welcomeuser{
+ font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  z-index: 100;
+}
 
 #logo{
   height: 89px; 
@@ -15,15 +19,6 @@
   top: -10px;
 }
 
-span.session{
-  color:#164A41;
-  position: absolute;
-  font-size: 13px;
-  right: 10%;
-  top: 10%;
-  margin: 0;
-  padding:0;
-}
 
 /* logout button */
 #logout{
@@ -44,19 +39,19 @@ span.session{
 
 
 /* Navbar */
+nav{
+  position: absolute;
+  
+}
 
 .nav-container{
-  
+  background: none;
   float: left;
   position: absolute;
-  height: 55px;
+  top: 7%;
   width: 100%;
-  z-index: 100;
 }
 
-nav:hover{
-  background: #9DC88D;
-}
 
 .nav-links {
   display: flex;
@@ -67,29 +62,32 @@ nav:hover{
 }
 
 .nav-links li a{
-  color: #edf5e1;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
   font-family:'Roboto', sans-serif;
 }
 
 
+i[class^="fa"]{
+  padding-right: 0.8em;
+  color: #ffffff; 
+}
 
- 
+
 
 /* hamburger animation cross */
 
   .menu-btn{
     cursor: pointer;
-    display: flex;
-    position: absolute;
+    display: inline-block;
+    position: fixed;
+    right: 0%;
+    top: 0%;
     width: 80px;
     height: 80px;
     border: none;
     outline: none;
-    background: transparent;
-    right: 0;
-    top: 0;
     transition: all .5s ease-in-out; 
     z-index: 1000;
   }
@@ -144,7 +142,7 @@ nav:hover{
       right: 0;
       top: 0;
       background:#9DC88D;
-      font-weight: 800;
+      font-weight: 700;
       height: 100vh;
       width: 35%;
       flex-direction: column;
@@ -188,7 +186,7 @@ nav:hover{
 
   nav{
     position: relative;
-    z-index: 100;
+    z-index: 1;
   }
   .nav-links.open{
     clip-path: circle(1000px at 90% -10%);
@@ -206,3 +204,61 @@ nav:hover{
     width: 100%;
   }
 }
+
+
+/* navdropdown menu */
+
+/* Dropdown Button */
+.navdropbtn {
+    padding: 16px 20px;
+    margin: 8px;
+    font-size: 13px;
+    background: transparent;
+    border-bottom: 2px solid #F1B24A;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    vertical-align: middle;
+    text-align: center;
+    width: 144px;
+    outline: none;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.navdropdown {
+  position: relative;
+  display: inline-block;
+  left: 80%;
+  
+}
+
+/* Dropdown Content (Hidden by Default) */
+.navdropdown-content {
+  display: none;
+  position: absolute;
+  top: 90%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.navdropdown-content a {
+  color: #515151;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.navdropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.navdropdown:hover .navdropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.navdropdown:hover .navdropbtn {color:#ffffff; background-color: #F1B24A;}

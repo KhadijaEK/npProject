@@ -1,6 +1,6 @@
 <?php
     date_default_timezone_set('Europe/London');
-    include '../model/comments.php';
+    include '../config/comments.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,17 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inverness (Loch NEss and Afric) </title>
     <link rel="stylesheet" href="../../css/trail.css">
-    <link rel="stylesheet" href="../../css/comments.css">
-    
-    <!-- load Outdooractive Javascript API -->
-    <script type="text/javascript" 
-    src="//www.outdooractive.com/alpportal/oa_head.js?proj=api-dev-oa&amp;key=yourtest-outdoora-ctiveapi&amp;lang=en&leaflet_gshim=1"></script>
 
 </head>
     <body>
-        <header>
-            <?php include('../view/navbar.php')?>
-        </header>
+    
 
         <div class="main-container-trail">
             <h1>Edit comment</h1>

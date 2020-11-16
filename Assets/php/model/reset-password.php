@@ -1,9 +1,19 @@
 <?php
-require'../config/dbconnect.php';
+// Update the details below with your MySQL details
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'npproject';
+try {
+    $db = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+} catch (PDOException $exception) {
+    // If there is an error with the connection, stop the script and display the error
+    exit('Failed to connect to database!');
+}
 
 
 if(isset($_POST['resetPassword'])){
-    $db = dbconnect();
+    
     //Get the name that is being searched for.
 $email = isset($_POST['email']) ? trim($_POST['email']) : '';
  
@@ -101,8 +111,8 @@ if(empty($userInfo)){
             <span class="focus-input100" data-placeholder="New Password"></span>
             <input type="submit" class="btn btn-primary" name="resetPassword" value="Reset Password">
         </form>
-            <p>Not registered yet? <a href="../../php/view/signup.php">Sign up</a></p>
-            <p>Already a member? <a href="../../php/model/login.php">Sign in</a></p>
+            <p>Not registered yet? <a href="../../php/model/registerfinal.php">Sign up</a></p>
+            <p>Already a member? <a href="../../php/model/loginfinal.php">Sign in</a></p>
     </div>
 
 

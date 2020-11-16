@@ -1,25 +1,15 @@
 <?php
-define('server', 'localhost');
-define('user_name', 'root');
-define('password', '');
-define('database', 'npProject');
 
-
-function dbConnect()
-{
-
-    try
-    {
-    $db = new PDO("mysql:host=".server.";dbname=". database, user_name, password);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);  
-        return $db;
-    echo "Connection established successfully!";
-    }
-    catch (PDOException $e)
-    {
-        die("ERROR: Could not connect. " . $e->getMessage());
-    }
+// Update the details below with your MySQL details
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'npproject';
+try {
+    $db = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+} catch (PDOException $exception) {
+    // If there is an error with the connection, stop the script and display the error
+    exit('Failed to connect to database!');
 }
 
 function time_elapsed_string($datetime, $full = false) {
@@ -42,22 +32,22 @@ function time_elapsed_string($datetime, $full = false) {
 
 //comments 
 
-$db = dbConnect();
 function setComments($db) {
     if(isset($_POST['commentSubmit'])){
         $userid = $_POST['userid'];
         $date = $_POST['date'];
         $comment = $_POST['comment'];
 
-        $sql = "INSERT INTO comments (userid, date, comment) VALUES ('$userid', '$date','$comment')";
-        $results = $conn->query($sql);
-
+        $sql = ("INSERT INTO comments (userid, date, comment) VALUES ('$userid', '$date','$comment')");
+        $results = $db->query($sql);
+       
+        
     }
 }
 
 function getComments($db){
     $sql = "SELECT * FROM comments ORDER BY date DESC LIMIT 0,10";
-    $results = $conn->query($sql);
+    $results = $db->query($sql);
     while ($row = $results->fetch(PDO::FETCH_ASSOC))
     {
         echo"<div class='comment-box'>";
@@ -66,11 +56,11 @@ function getComments($db){
         echo $row['comment'];
         echo"
             
-            <form class='delete-form' method='POST' action='".deleteComments()."'>
+            <form class='delete-form' method='POST' action='".deleteComments($db)."'>
                 <input type='hidden' name='commentid' value='".$row['commentid']."'>
                 <button class='btn' name='commentDelete' type='submit'><i class='fa fa-trash' aria-hidden='true'></i></button>
             </form>
-            <form class='edit-form' method='POST' action='editComments.php'>
+            <form class='edit-form' method='POST' action='editcomments.php'>
                 <input type='hidden' name='commentid' value='".$row['commentid']."'>
                 <input style='font-weigth: bold' type='hidden' name='userid' value='".$row['userid']."'>
                 <input type='hidden' name='date' value='".$row['date']."'>
@@ -89,7 +79,7 @@ function editComments($db) {
         $comment = $_POST['comment'];
 
         $sql = "UPDATE comments SET comment='$comment' WHERE commentid='$commentid'";
-        $results = $conn->query($sql);
+        $results = $db->query($sql);
         header('Location: lochness.php');
     }
 }
@@ -98,7 +88,7 @@ function deleteComments($db){
     if(isset($_POST['commentDelete'])){
         $commentid = $_POST['commentid'];
         $sql = "DELETE FROM comments WHERE commentid='$commentid'";
-        $results = $conn->query($sql);
+        $results = $db->query($sql);
         
     }
 }

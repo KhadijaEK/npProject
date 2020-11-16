@@ -1,44 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+*{margin: 0; padding: 0; box-sizing: border-box;}
 /* END CSS RESET */
 
 /* colors : dark blue: #33697B - dark pink: #FC8585 - soft pink: #FC9885 */
@@ -48,10 +8,6 @@ table {
 #logo{
     height: 30%;
     width: 30%;
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .landingpage {
     background: url("../images/joshua-earle-wFWQmOyfkkM-unsplash.jpg") no-repeat center center fixed; 
@@ -66,13 +22,11 @@ table {
 .titlecontainer{
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);   
-    text-align: center;
+    position: relative;
+    width: auto; 
+   
 }
+
 
 h1{
     color: white;
@@ -83,6 +37,7 @@ h1{
     text-align: center;
 }
 
+
 h2{
     color: white;
     font-weight: 700;
@@ -91,7 +46,6 @@ h2{
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
-
 
 
 /* Landpage Find a walk - flip button*/
@@ -108,10 +62,12 @@ h2{
     font-size: 13px;
     font-weight: 700;
     width: 144px;
+    top: 70%;
     position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 3vh;
 
 }
 
@@ -122,48 +78,68 @@ h2{
 }
 
 
-/* LOGIN PAGE */
+/* LOGIN PAGE  2 columns */
+
 
 #error{
     display: none;
 }
 
-#login{
-    background-image: url('../images/rob-walsh-ZRUQ08NDYeo-unsplash.jpg');
+/* Split the screen in half */
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+
+.left{
+
+    height: 100vh;
+    background: url(../images/rob-walsh-ZRUQ08NDYeo-unsplash-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
-    
 }
+
 #signup{
-    background-image: url('../images/gary-ellis-zxyOtcGf790-unsplash.jpg');
+
+    height: 100vh;
+    background: url(../images/gary-ellis-zxyOtcGf790-unsplash-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
-    
+    background-position: right -10px bottom 0px;
+   
 }
 
-
-
+.login-container{
+    float: right;
+    width: 50%;
+    padding: 144px;
+position: relative; 
+font-family: 'Roboto', sans-serif;
+}
 
 .login-form{
-background-color:#ffffff;
-border-radius: 20px;
-padding: 5vh;
-position: absolute; 
-right: 8%; 
-font-family: 'Roboto', sans-serif;
-}
+    background-color:#ffffff;
+    padding: 5vh;
+    position: absolute;
+    left: 10%; 
+    font-family: 'Roboto', sans-serif;
+    
+    }
 
-.signup-form{
-background-color:#ffffff;
-border-radius: 20px;
-padding: 5vh;
-position: absolute;
-left: 10%; 
-font-family: 'Roboto', sans-serif;
 
-}
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+  }
 
 .login-title{
     color: #164A41;
@@ -231,36 +207,43 @@ outline: none;
 display:none;
 }
 
+/* show/hide password icon */
 span[toggle="password-field"]{
-position: absolute;
-left: 85%;
-top: 60%;
+position: fixed;
+left: 83%;
+top: 58%;
+z-index: 10;
+}
+span[toggle="signuptoggle"]{
+position: fixed;
+left: 90%;
+top: 59%;
 z-index: 10;
 }
 
+.signuptoggle{
+position: fixed;
+left: 100%;
+top: 63%;
+z-index: 10
+}
 
 /* buttons */
-.btn.btn-warning, .btn.btn-info{
-padding: 10px 40px;
-}
+
 
 .btn.btn-info{
-    border: 2px solid #9DC88D;
-    color: #9DC88D;
-    background-color: transparent;
-}
-
-.btn.btn-warning:hover, .btn.btn-warning:focus{
-    background: #4D774E;
-    border: 2px solid #4D774E;
-    border: none;
-    outline:none;
-}
-.btn.btn-info:hover{
     background: #9DC88D;
     border: 2px solid #9DC88D;
     color: #ffffff;
-    border: none;
+    padding: 10px 42px;
+}
+
+
+.btn.btn-info:hover, .btn.btn-info:focus{
+    background-color: #164A41;
+    
+    color: #ffffff;
+    border: 2px solid #164A41;
    
 }
 

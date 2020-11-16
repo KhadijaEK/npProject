@@ -5,8 +5,8 @@
     // Connect to the database
     class Database {
         private $host = "localhost";
-        private $db_name = "npProject";
-        private $username = "root";
+        private $db_name = "npproject";
+        private $usern = "root";
         private $password = "";
         public $conn;
 
@@ -15,7 +15,7 @@
             try {
                 $this->conn = new PDO(
                     "mysql:host=" . $this->host . ";dbname=" . $this->db_name,
-                    $this->username,
+                    $this->usern,
                     $this->password);
                 $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
@@ -83,7 +83,7 @@
         }
 
         public function redirect($url) {
-            header("Location: welcome.php");
+            header("Location: $url");
             exit;
         }
 

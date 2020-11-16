@@ -1,9 +1,20 @@
 <?php
-require'../config/dbconnect.php';
+// Update the details below with your MySQL details
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'npproject';
+try {
+    $db = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+} catch (PDOException $exception) {
+    // If there is an error with the connection, stop the script and display the error
+    exit('Failed to connect to database!');
+}
+
 
 
 if(isset($_POST['sendEmail'])){
-    $db = dbconnect();
+  
     //Get the name that is being searched for.
 $email = isset($_POST['email']) ? trim($_POST['email']) : '';
  
@@ -136,26 +147,26 @@ exit;
 
     </head>
     <body>
-    <div class="container" style="width:500px;">  
-                <?php  
-                if(isset($message))  
-                {  
-                     echo '<label class="text-danger">'.$message.'</label>';  
-                }  
-                ?>  
+        <div class="container" style="width:500px;">  
+                    <?php  
+                    if(isset($message))  
+                    {  
+                        echo '<label class="text-danger">'.$message.'</label>';  
+                    }  
+                    ?>  
 
-        <h1>Forgot password</h1>
-        <form action="" method="post">
-            <label for="email">Enter email</label>
-            <input type="email" id="email" class="form-control" name="email" placeholder="email" required><br>
-            <input type="submit" class="btn btn-primary" name="sendEmail" value="Send an email">
-        </form>
-            <p>Not registered yet? <a href="../../php/view/signup.php">Sign up</a></p>
-            <p>Already a member? <a href="../../php/model/login.php">Sign in</a></p>
+            <h1>Forgot password</h1>
+            <form action="" method="post" class="login-form">
+                <label for="email">Enter email</label>
+                <input type="email" id="email" class="form-control" name="email" placeholder="email" required><br>
+                <input type="submit" class="btn btn-primary" name="sendEmail" value="Send an email">
+            </form>
+                <p>Not registered yet? <a href="../../php/view/signup.php">Sign up</a></p>
+                <p>Already a member? <a href="../../php/model/login.php">Sign in</a></p>
 
-        
-    </div>
+            
+        </div>
 
 
-        </body>
+    </body>
 </html>

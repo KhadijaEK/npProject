@@ -1,12 +1,6 @@
 //input masks phone number input form
 //launch jQuery function($) pour ne pas créer de conflits avec d'autres library
 
-$(function(){
-    // Du code en jQuery va pouvoir être tapé ici !
-    console.log("jQuery est prêt !");
-   
-});
-
 
 //!Form validation
 
@@ -53,9 +47,6 @@ let $erreur = $('#error');
 
 });
 
-$('button').on('click', function(){
-    alert('Ce code fonctionne !');
-});
 
 //show/hide password
 function showPassword(){
