@@ -16,13 +16,11 @@
 
        <nav>
         <div class="nav-container">
-                <!--test hamburger-->
             <a href="../../php/model/welcome.php">
                 <img id="logo" src="../../images/logocolor.png" alt="Logo">
             </a>
-            <!--loggedin-->
-                <h2 class="welcomeuser">Welcome, <?php echo $user_id;?>!</h2>
-        </div>
+            
+       
         <!--Dropdownn menu-->
             <div class="navdropdown">
                     <button class="navdropbtn">Highlands</button>
@@ -52,11 +50,14 @@
                         <a href="#">Isle of Mull</a>
                     </div>
                     </div>
-
+        </div>
+        <!--loggedin-->
+        
        <!--Hamburger and slide bar-->
         <div class="menu-btn">
             <div class="menu-btn__hamburger"></div>
                 <ul class="nav-links">
+                    <span class="welcomeuser">Welcome, <?php echo $user_id;?></span>
                     <li><i class="fas fa-home"></i><a href="../model/welcome.php">Home</a></li>
                     <li><i class="fas fa-search-location"></i><a href="../view/map.php">Find a walk</a></li>
                     <li><i class="fas fa-plane"></i><a href="https://www.tripadvisor.com/Attractions-g186485-Activities-c61-t87-Scotland.html">Plan your trip</a></li>

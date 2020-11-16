@@ -6,9 +6,11 @@
 /* Logo & session */
 
 .welcomeuser{
- font-size: 13px;
+  font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  z-index: 100;
+  position: relative; 
+  color: #164A41;
+
 }
 
 #logo{
@@ -45,11 +47,10 @@ nav{
 }
 
 .nav-container{
-  background: none;
-  float: left;
-  position: absolute;
-  top: 7%;
+  background: transparent; 
+  position: fixed;
   width: 100%;
+  z-index: 800;
 }
 
 
@@ -235,19 +236,20 @@ i[class^="fa"]{
 .navdropdown {
   position: relative;
   display: inline-block;
-  left: 80%;
-  
+  left: 25%;
+ 
+ 
 }
 
 /* Dropdown Content (Hidden by Default) */
 .navdropdown-content {
   display: none;
   position: absolute;
-  top: 90%;
+  top: 70%;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   background-color: #ffffff;
-  min-width: 160px;
+  min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
