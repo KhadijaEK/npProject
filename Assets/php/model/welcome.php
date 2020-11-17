@@ -59,10 +59,13 @@
             </section>
         </div>
         
+        <!--Code to include navbar-->
+      <?php include("./../view/footer.php"); ?>
 
           
     <script src="../../js/navbar.js"></script>
     <script src="https://kit.fontawesome.com/1c8661e552.js" crossorigin="anonymous"></script>
+    <!--MAilchimp-->
     <!--End scripts all pages-->
     </body>
 </html>

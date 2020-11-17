@@ -58,7 +58,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Register form</title>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+        
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link href="../../css/styles.css?v=<?php echo time(); ?>" rel="stylesheet">
           
@@ -68,14 +68,12 @@
     <body>
         
         <div class="row">
-            <div  id="signup" class="column left">
-            <img id="logo" src="../../images/logocolor.png" alt="logo">
+            <div id="signupage" class="column left">
+                <img id="logo" src="../../images/logocolor.png" class="responsive" alt="logo">
             </div>
             
             
-            <div class="login-container column right">
-            
-                
+        <div class="login-container column right"> 
                 <?php
                     if(isset($error)) {
                         foreach($error as $error) {
@@ -87,10 +85,12 @@
                 <h2 class="login-title">Register</h2>
                     <input type="text" name="txt_uname" placeholder="Username" value="<?php if(isset($error)){echo $uname;}?>" />
                     <input type="text" name="txt_umail" placeholder="Email" value="<?php if(isset($error)){echo $umail;}?>" />
-                    <input id="password" type="password" name="txt_upass" placeholder="Password" />
-                    <!-- An element to toggle between password visibility -->
-                    <span toggle="signuptoggle" class="fa fa-fw fa-eye fa-1x field_icon toggle-password " onclick="showPassword()"></span>
+                    <div class="input-icons">
+                        <input id="password" type="password" name="txt_upass" placeholder="Password" />
                     
+                        <!-- An element to toggle between password visibility -->
+                        <span toggle="signuptoggle" class="fa fa-fw fa-eye fa-1x field_icon toggle-password " onclick="showPassword()"></span>
+                    </div>
                     <input id="confirm_password" class="form-control " type="password" name="confirm_pw" placeholder="Confirm password" required onChange="checkPasswordMatch();">
                     <div id="checkmatch"></div>
                     
@@ -99,7 +99,7 @@
                     <label>Already registered? <a href="loginfinal.php">Sign in</a></Label>
                 </form>
             </div>
-                </div>
+        </div>
 
         <!-- ALL JS FILES -->
 

@@ -81,6 +81,7 @@ h2{
 .signupbtn{
     background-color: #F1B24A;
     border-radius: 20px;
+    border: 3px solid  #F1B24A;
     color: white;
     cursor: pointer;
     height: 34px;
@@ -120,7 +121,7 @@ h2{
     background-repeat: no-repeat;
 }
 
-#signup{
+#signupage{
 
     height: 100vh;
     background: url(../images/gary-ellis-zxyOtcGf790-unsplash-min.jpg);
@@ -130,12 +131,14 @@ h2{
    
 }
 
+/* Login & Register forms */
+
 .login-container{
     float: right;
     width: 50%;
     padding: 144px;
-position: relative; 
-font-family: 'Roboto', sans-serif;
+    position: relative; 
+    font-family: 'Roboto', sans-serif;
 }
 
 .login-form{
@@ -143,21 +146,13 @@ font-family: 'Roboto', sans-serif;
     padding: 5vh;
     position: absolute;
     left: 10%; 
+    top: 15%;
     font-family: 'Roboto', sans-serif;
     
     }
 
 
-/* Full-width inputs */
-input[type=text], input[type=password] {
-    width: 90%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
 
-  }
 
 .login-title{
     color: #164A41;
@@ -166,26 +161,7 @@ input[type=text], input[type=password] {
     text-align: left;
 }
 
-.form-group{
-background-color: none;
-border: none;
-display: block;
-height: auto;
-font-size: 16px;
-line-height: 1.5;
-margin: 0 auto;
-font-family: 'Roboto', sans-serif;
-overflow: hidden;
 
-}
-
-.form-group .item{
-align-items: center; /* align center + display + position*/
-background-color: rgb(236, 234, 234);  
-display: block;
-margin: 0 auto;
-position: relative;
-}
 
 legend{
 font-size: 34px;
@@ -220,30 +196,46 @@ outline: none;
 }
 
 
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+  }
+
+
 /* password & icon */
 .toggle{
 display:none;
 }
 
 /* show/hide password icon */
+
+
+  
+.input-icons { 
+    width: 100%; 
+        
+} 
+
 span[toggle="password-field"]{
-position: fixed;
-left: 83%;
-top: 58%;
-z-index: 10;
-}
-span[toggle="signuptoggle"]{
-position: fixed;
-left: 90%;
-top: 59%;
+position: relative; 
+float: right;
+margin-right: 6px;
+margin-top: -37px;
 z-index: 10;
 }
 
-.signuptoggle{
-position: fixed;
-left: 100%;
-top: 63%;
-z-index: 10
+span[toggle="signuptoggle"]{
+    position: relative; 
+    float: right;
+    margin-right: 6px;
+    margin-top: -37px;
+    z-index: 10;
 }
 
 /* buttons */
@@ -253,7 +245,9 @@ z-index: 10
     background: #9DC88D;
     border: 2px solid #9DC88D;
     color: #ffffff;
+    font-weight: 700;
     padding: 10px 42px;
+    width: 100%;
 }
 
 
@@ -267,13 +261,14 @@ z-index: 10
 
 /* Responsive forms */
 
-@media only screen and (max-width:768px) and (min-width:200px){
+@media only screen and (max-width:768px) and (min-width:300px){
     
-    #login.login-container{
-        background-color: #ffffff; 
-        position: relative;
-        margin: 13px;
+    img.responsive{
+        height: 89px;
+        width: 89px;
     }
+
+   
     
     .login-form{
         height: 100vh;

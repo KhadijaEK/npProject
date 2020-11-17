@@ -120,7 +120,7 @@
             
       
                 <script src="../../js/navbar.js"></script>
-                <script src="../../js/m"></script>
+                
                 <script src="https://kit.fontawesome.com/1c8661e552.js" crossorigin="anonymous"></script>
             <!--End scripts all pages-->
 
