@@ -5,13 +5,9 @@
   }
 
 
-#fullpage{
-    height: 100vh;
+#fullpage section{
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
-}
-
-#fullpage section{
     height: 100vh;
 }   
 
@@ -23,8 +19,6 @@
 }
 
 
-
-
 .container{    
     overflow: hidden;
     margin: 0 auto;
@@ -34,23 +28,22 @@
     height: 500px;
 }
 
-#container-top{
-    padding-bottom: 60px;
-    margin: 0 auto;
-    height: 233px;
-
-    position: relative;
+.welcome-container{
     display: flex;
+    height: 233px;
     left: 10%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    position: relative;
 }
 
 
-.headtitle{
+.welcome-container__head{
 
     height: auto;
     color: #ffffff;
     padding-left: 25px;
-    padding-top: 130px;
+    padding-top: 140px;
     width: 500px;
 }
 
@@ -73,20 +66,26 @@ p {
 }
 
 /* button */
-.findbtn{
-    background-color: #F1B24A;
-    border: none;
+
+.btn{
     border-radius: 35px;
-    color: white;
     cursor: pointer;
     font-size: 13px;
     font-weight: 600;
-    position: absolute;
-    top: 110%;
     padding: 12px 42px;
 }
 
-.findbtn:hover{
+.btn-primary{
+    background-color: #F1B24A;
+    color: white;
+    border: none;
+    position: absolute;
+    top: 110%;
+    left: 10%;
+    
+}
+
+.btn-primary:hover{
     background-color:#164A41;;
     border: transparent;
     outline: none;
@@ -98,10 +97,11 @@ p {
     flex-direction: column;
     height: auto;
     position: relative;
-    width: 300px;
+    
+    
 }
 
-.stars-ratingBox{
+.ratingBox__stars{
     background-color:#164A41;
     border-radius: 7px;
     font-weight: 700;
@@ -114,7 +114,10 @@ p {
 
 }
 
-.star-text{
+.ratingBox__stars--space2{left: 20px;}
+.ratingBox__stars--space3{left: 40px;}
+
+.ratingBox__text{
     color: #ffffff;
     position: relative;
     display: inline-flex;
@@ -124,8 +127,7 @@ p {
     vertical-align: bottom;
 }
 
-.space2{left: 20px;}
-.space3{left: 40px;}
+
 
 
 

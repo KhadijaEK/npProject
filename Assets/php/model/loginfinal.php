@@ -12,7 +12,7 @@
         $upass = strip_tags($_POST['txt_password']);
 
         if($login->doLogin($uname,$umail,$upass)) {
-            $login->redirect('welcome.php');
+            $login->redirect('../view/welcome.php');
         }
         else {
             $error = "Wrong Details!";

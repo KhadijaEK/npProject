@@ -4,7 +4,7 @@
     $user = new USER();
 
     if($user->is_loggedin()!="") {
-        $user->redirect('welcome.php');
+        $user->redirect('../view/welcome.php');
     }
 
     if(isset($_POST['btn-signup'])) {
@@ -25,7 +25,7 @@
             $error[] = "Provide password!";
         }
         else if(strlen($upass) < 8){
-            $error[] = "Password must be atleast 8 characters!";
+            $error[] = "Password must be at least 8 characters!";
         }
         else {
             try {

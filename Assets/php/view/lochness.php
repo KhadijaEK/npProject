@@ -24,7 +24,7 @@
     <body>
         <header>
         <!--Code to include navbar-->
-        <?php include("./../view/navbar.php"); ?>
+        <?php include("./../model/navbar.php"); ?>
         <style><?php include("../../css/navbar.css"); ?></style>
         <!--END OF Code to include navbar-->
         </header>
