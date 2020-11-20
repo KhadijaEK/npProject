@@ -1,9 +1,15 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+ 
   }
 
+  * {
+    box-sizing: border-box;
+  }
+  *::before, *::after {
+    box-sizing: border-box;
+  }
 
 #fullpage section{
     overflow: hidden;
@@ -30,11 +36,13 @@
 
 .welcome-container{
     display: flex;
-    height: 233px;
+    height: auto;
+    width: 100%;
     left: 10%;
     margin: 0 auto;
     padding-bottom: 60px;
     position: relative;
+   
 }
 
 
@@ -67,49 +75,108 @@ p {
 
 /* button */
 
-.btn{
-    border-radius: 35px;
+/* for special button */
+
+  
+  button {
+    position: relative;
+    display: inline-block;
     cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 12px 42px;
-}
-
-.btn-primary{
-    background-color: #F1B24A;
-    color: white;
-    border: none;
-    position: absolute;
-    top: 110%;
-    left: 10%;
-    
-}
-
-.btn-primary:hover{
-    background-color:#164A41;;
-    border: transparent;
     outline: none;
-}
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    margin-top: 21px;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  button.learn-more {
+    width: 12rem;
+    height: auto;
+  }
+  button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #F1B24A;
+    border-radius: 1.625rem;
+  }
+  button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+  button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+  button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+  button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  button:hover .circle {
+    width: 100%;
+  }
+  button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+  button:hover .button-text {
+    color: #fff;
+  }
+  
 
+  
 /* review boxes on the right */
 .ratingBox{
     display: flex;
     flex-direction: column;
-    height: auto;
     position: relative;
-    
-    
+    height: 377px;
 }
 
 .ratingBox__stars{
     background-color:#164A41;
     border-radius: 7px;
     font-weight: 700;
-    height: 60px;
+    height: 55px;
     margin: 15px;
     padding-left: 5%;
     position: relative;
-    top: 40%;
+    top: 25%;
     width: 377px;
 
 }
@@ -124,12 +191,9 @@ p {
     padding-left: 25px;
     bottom: 5%;
     font-size: 13px;
+    font-weight: 700;
     vertical-align: bottom;
 }
-
-
-
-
 
 
 h4{
@@ -147,32 +211,6 @@ h5{
 
 }
 
-.comment-text{
-    clear: left;
-    color: #ffffff;
-    font-size: 10pt;
-    font-weight: 500;
-    padding-top: 1.5em;
-}
-
-/* alignement horizontal comment box  */
-
-.level2{
-    top: 20px;    
-}
-
-.level3{
-    top: 40px;
-        
-}
-
-.profile-picture{
-    border-radius: 50%;
-    position: relative;
-    float: left;
-    width: 20%;
-   
-}
 
 /*! responsive */
 @media screen and (max-width: 375px) {
@@ -184,26 +222,14 @@ h5{
         padding: 0;
     }
 
-    #container-top, #container-bottom {
+    #container-top {
         flex-direction: column;
         display: flex;
         flex-wrap: wrap;
         width: 375px;
         height: auto;
         margin-left: 0px;
-        padding: 0px;
-     
-    }
-    
-    .comment-mainbox, .comment-wrap, .headtitle, .ratingBox{
-        flex-direction: column;
-        position: relative;
-        margin: 0px;
-        padding:0px;
-        left: 0px;
-        width: 300px;
-      
-        
+        padding: 0px;   
     }
 
     .stars-ratingBox{
@@ -211,12 +237,12 @@ h5{
         position: relative;
         width: 50px;
         left: 0px;
+       
     }
 
     .space2, .space3{
         left: 0px;
     }
-    
-   
+
   }
 /* !end of responsive */

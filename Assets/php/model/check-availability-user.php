@@ -4,9 +4,9 @@ require_once("../config/dbconnect.php");
 // Code for checking Email-ID availabilty
 // Code for checking email availabilty
 if(isset($_POST["email"])) {
-    $db=dbconnect();
+
     $email= $_POST["email"];
-    $sql ="SELECT COUNT(*) AS count FROM `users` WHERE email=':email'";
+    $sql ="SELECT COUNT(*) AS count FROM users WHERE email=':email'";
     $query= $db -> prepare($sql);
     $query-> bindParam(':email', $email, PDO::PARAM_STR);
     $query-> execute();

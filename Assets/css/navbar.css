@@ -78,7 +78,7 @@ i[class^="fa"]{
   padding-right: 0.8em;
 }
 
-.fa-home, .fa-search-location, .fa-plane,
+.fa-home, .fa-map, .fa-plane,
 .fa-envelope{
   color: #ffffff;
 }

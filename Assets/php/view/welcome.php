@@ -21,41 +21,43 @@
             <section>
                 <div class="container">
                     <div class="welcome-container">
-                    <article class="welcome-container__head">
-                        <h1>100+ of the best Scottish trails</h1>
-                        <p>Ready to check out the best trails in Scotland?<br />
-                        See how our community of hikers rates our website.</p>
-                       <a  href="../../php/view/map.php" class="btn"><span class="btn btn-primary" type="submit" placeholder="Sign in"> <i class="fas fa-search-location"></i>Find a walk</button></a>
-            
-                    </article>
-                    <article class="ratingBox">
-                        <div class="ratingBox__stars">
-                            <img src="../../images/icon-star.svg">
-                            <img src="../../images/icon-star.svg">
-                            <img src="../../images/icon-star.svg">
-                            <img src="../../images/icon-star.svg">
-                            <img src="../../images/icon-star.svg" >
-                            <p class="ratingBox__text">5 Stars in Reviews</p> </div>
-                        <div class="ratingBox__stars ratingBox__stars--space2"> 
-                            <img src="../../images/icon-star.svg" >
-                            <img src="../../images/icon-star.svg" >
-                            <img src="../../images/icon-star.svg" >
-                            <img src="../../images/icon-star.svg" >
-                            <img src="../../images/icon-star.svg" >
-                            <p class="ratingBox__text">5 Stars in Report Mountain</p> </div>
-                        <div class="ratingBox__stars ratingBox__stars--space3"> 
-                            <img src="../../images/icon-star.svg" >
-                            <img src="../../images/icon-star.svg" >
-                            <img src="../../images/icon-star.svg" >
-                            <img src="../../images/icon-star.svg" >
-                            <img src="../../images/icon-star.svg" >
-                            <p class="ratingBox__text">5 Stars in BestHike</p> </div>
-                    </article>
-                </div>  
-            </div>
+                        <article class="welcome-container__head">
+                            <h1>100+ of the best Scottish trails</h1>
+                            <p>Ready to check out the best trails in Scotland?<br />
+                            See how our community of hikers rates our website.</p>
+                            <a href="../view/map.php"><button class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Find a walk</span>
+                            </button></a>
 
-                </div>
-                
+                        </article>
+                        <article class="ratingBox">
+                            <div class="ratingBox__stars">
+                                <img src="../../images/icon-star.svg">
+                                <img src="../../images/icon-star.svg">
+                                <img src="../../images/icon-star.svg">
+                                <img src="../../images/icon-star.svg">
+                                <img src="../../images/icon-star.svg" >
+                                <p class="ratingBox__text">5 Stars in Reviews</p> </div>
+                            <div class="ratingBox__stars ratingBox__stars--space2"> 
+                                <img src="../../images/icon-star.svg" >
+                                <img src="../../images/icon-star.svg" >
+                                <img src="../../images/icon-star.svg" >
+                                <img src="../../images/icon-star.svg" >
+                                <img src="../../images/icon-star.svg" >
+                                <p class="ratingBox__text">5 Stars in Report Mountain</p> </div>
+                            <div class="ratingBox__stars ratingBox__stars--space3"> 
+                                <img src="../../images/icon-star.svg" >
+                                <img src="../../images/icon-star.svg" >
+                                <img src="../../images/icon-star.svg" >
+                                <img src="../../images/icon-star.svg" >
+                                <img src="../../images/icon-star.svg" >
+                                <p class="ratingBox__text">5 Stars in BestHike</p> </div>
+                        </article>
+                </div>  
+            </div> 
             </section>
         </div>
         

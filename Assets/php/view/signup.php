@@ -6,7 +6,6 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register</title>
@@ -14,8 +13,6 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-
-
 
 </head>
 <body id="signup">
@@ -32,8 +29,8 @@ session_start();
                                         
 
                                        
-                                            <input class="form-control " type="email" name="email" placeholder="jdoe@gmail.com" onfocus="this.value=' '" required pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$" onchange="checkEmailAvailability();">        
-                                            <span id="email-availability-status" "></span>
+                                            <input class="form-control" type="email" name="email" placeholder="jdoe@gmail.com" onfocus="this.value=' '" required pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$" onchange="checkEmailAvailability();">        
+                                            <span id="email-availability-status"></span>
                                       
                                       
                                             <input id="password" class="form-control " type="password" name="password" placeholder="Enter password" required pattern=".{8,}" required title="8 characters minimum"  >

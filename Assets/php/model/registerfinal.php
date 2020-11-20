@@ -58,10 +58,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Register form</title>
-        
+       
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link href="../../css/styles.css?v=<?php echo time(); ?>" rel="stylesheet">
-          
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <!--Javascript for check email availability-->
+                <script>
+                        function checkemailAvailability() {
+                        $("#loaderIcon").show();
+                        jQuery.ajax({
+                        url: "/Assets/php/model/check-availability-user.php",
+                        data:'emailid='+$("#email").val(),
+                        type: "POST",
+                        success:function(data){
+                        $("#email-availability-status").html(data);
+                        $("#loaderIcon").hide();
+                        },
+                        error:function (){}
+                        });
+                        }
+                </script>
 </head>
 
 
@@ -84,7 +101,9 @@
                 <form method="post" class="login-form">
                 <h2 class="login-title">Register</h2>
                     <input type="text" name="txt_uname" placeholder="Username" value="<?php if(isset($error)){echo $uname;}?>" />
-                    <input type="text" name="txt_umail" placeholder="Email" value="<?php if(isset($error)){echo $umail;}?>" />
+                    <input type="text" id="email" name="txt_umail" placeholder="Email" value="<?php if(isset($error)){echo $umail;}?>" onChange="checkemailAvailability();"/>
+                    <span id="email-availability-status"></span>
+                                      
                     <div class="input-icons">
                         <input id="password" type="password" name="txt_upass" placeholder="Password" />
                     
@@ -103,15 +122,14 @@
 
         <!-- ALL JS FILES -->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- ALL PLUGINS -->
  <!--dans l'ordre les scripts-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
 <script src="../../js/form.js"></script>
-<script src="js/form-validator.min.js"></script>
-<script src="js/contact-form-script.js"></script>
-<script src="js/custom.js"></script>
+<script src="../../js/form-validator.min.js"></script>
+<script src="../../js/contact-form-script.js"></script>
+
 
 
 
@@ -133,24 +151,7 @@
                         });
                         
         </script>
-        </script>
-        <!--Javascript for check email availability-->
-        <script>
-                function checkEmailAvailability() {
-                    $("#loaderIcon").show();
-                    jQuery.ajax({
-                        url: "/Assets/php/model/check-availability-user.php",
-                        data:'email='+$("#email").val(),
-                        type: "POST",
-                    success:function(data){
-                    $("#email-availability-status").html(data);
-                    $("#loaderIcon").hide();
-                    },
-                        error:function (){
-                        event.preventDefault();
-                        }
-                    });
-                }
-        </script>
+       
+        
     </body>
 </html>

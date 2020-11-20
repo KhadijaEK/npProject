@@ -58,8 +58,8 @@
             <div class="menu-btn__hamburger"></div>
                 <ul class="nav-links">
                     <span class="welcomeuser">Welcome, <?php echo $user_id;?></span>
-                    <li><i class="fas fa-home" <?php if($currentpage = 'welcome') {echo ' id="active"';} else {echo 'id=""';} ?>></i><a href="../view/welcome.php" >Home</a></li>
-                    <li><i class="fas fa-search-location" <?php if($currentpage = 'map') {echo ' id="active"';} else {echo 'id=""';} ?>></i><a href="../view/map.php">Find a walk</a></li>
+                    <li><i class="fas fa-home" <?php if($currentpage == 'welcome') {echo ' id="active"';} else {echo 'id=""';} ?>></i><a href="../view/welcome.php" >Home</a></li>
+                    <li><i class="fas fa-map" <?php if($currentpage == 'map') {echo ' id="active"';} else {echo 'id=""';} ?>></i><a href="../view/map.php">Find a walk</a></li>
                     <li><i class="fas fa-plane"></i><a href="https://www.tripadvisor.com/Attractions-g186485-Activities-c61-t87-Scotland.html">Plan your trip</a></li>
                     <li><i class="fas fa-sign-out-alt"></i><a href="../model/logoutfinal.php"></span><input id="logout" type="submit" name="logout" value="Log me out"></a></li>
                 </ul>
