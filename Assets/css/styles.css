@@ -4,6 +4,7 @@
 /* colors : dark blue: #33697B - dark pink: #FC8585 - soft pink: #FC9885 */
 
 
+
 /* Landing page */
 #logo{
     height: 30%;
@@ -54,7 +55,7 @@ h2{
 
 .signinbtn{
     background-color: transparent;
-    border: 3px solid#ffffff;
+    border: 3px solid #ffffff;
     border-radius: 20px;
     color: #ffffff;
     cursor: pointer;
@@ -82,6 +83,7 @@ h2{
 
   
 button {
+  font-family: 'Roboto', sans-serif;
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -91,9 +93,12 @@ button {
     text-decoration: none;
     background: transparent;
     padding: 0;
-    margin-top: 21px;
-    font-size: inherit;
-    font-family: inherit;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    
   }
   button.learn-more {
     width: 12rem;
@@ -329,6 +334,7 @@ span[toggle="signuptoggle"]{
 .btn.btn-info{
     background: #9DC88D;
     border: 2px solid #9DC88D;
+    border-radius:20px;
     color: #ffffff;
     font-weight: 700;
     padding: 10px 42px;

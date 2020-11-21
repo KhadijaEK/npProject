@@ -343,14 +343,16 @@
     
 
 
-
-<!--SCRIPTS-->
-<script src="../../js/navbar.js" async="false"></script>
-<script src="https://kit.fontawesome.com/1c8661e552.js" crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
+      <!--Code to include footer-->
+      <?php include("./../model/footer.php"); ?>
+      <!--End code to include footer-->
+      <!--SCRIPTS-->
+      <script src="../../js/navbar.js" async="false"></script>
+      <script src="https://kit.fontawesome.com/1c8661e552.js" crossorigin="anonymous"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
 </body>
 </html>
 

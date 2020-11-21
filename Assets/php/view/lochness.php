@@ -110,9 +110,8 @@
                 </figure>
                 <!--END Comment section--> 
             </div>
-        
-
         </section>
+          
     </div>
       
 
@@ -223,6 +222,10 @@
 
     </script>
     <!--end map-->
+
+    <!--Code to include footer-->
+    <?php include("./../model/footer.php"); ?>
+        <!--End code to include footer-->
     </body>
 
     
