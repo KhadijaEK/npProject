@@ -31,9 +31,9 @@ if(isset($_POST['password'])){
 
     if($query) {
         $query = $db->query("DELETE FROM  password_reset_request WHERE token=$token");
-        exit("Password updated successfully");
         echo'<p><a href="../../php/model/loginfinal.php">Sign in</a></p>';
         header('Location: loginfinal.php');
+        exit("Password updated successfully");
         
     } else {
         exit("Something went wrong");

@@ -27,14 +27,15 @@
   position: relative;
 }
 
+
 /* MAP Os API */
 
 
       #viewDiv {
         padding: 0;
         margin: 0;
-        height: 300px;
-        width: 400px;
+        height: 350px;
+        width: 500px;
         position: relative;
         top: 30%;
       }
@@ -45,7 +46,19 @@
         display: none;
       }
  
+figcaption{
+  font-size: 8px;
+  color: #515151;
+  font-family: inherit;
+}
 
+.breadcrumb{
+  font-size: 55px;
+  color: #ccc;
+  position: absolute;
+  right: 5%;
+  top: 20%;
+}
 
 /* Gallery Grid section 1*/
 .gallery {
@@ -123,7 +136,7 @@
 }
 
 .grid__item--map {
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 8;
@@ -135,7 +148,7 @@
   grid-row-end: 2;
 
 
-  color:#F1B24A;
+    color:#F1B24A;
     font-family: 'Oswald', sans-serif;    
     font-weight: 500;
     font-size: 21px;
@@ -161,7 +174,7 @@
 }
 
 .grid__item--weather{
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 2;
@@ -199,9 +212,10 @@
 }
 
 
-
 h4{
   padding: 0px;
+  font-family: inherit;
+
   color: #515151;
 }
 
@@ -210,22 +224,17 @@ h4{
   font-size: 16px;
 }
 
-
-
-
 /* comment section */
 
 
 .comment-container{
-
+  background: #f0f0f0;
   display: inline-block;
   position: relative;
   height: auto;
   width: 85%;
-  height: 200px;
-  overflow: scroll;
- 
-
+  height: 230px;
+  overflow-y: scroll;
 }
 
 textarea{
@@ -238,6 +247,7 @@ textarea{
     border: 1px solid #cccccc;
   outline: none;
     margin-top: 10px;
+    margin-left: 10px; 
 }
 
 textarea:focus{
@@ -254,6 +264,7 @@ textarea:focus{
   font-size: 13px;
   font-weight: 600;
   left: 80%;
+  top: 6%;
   margin-right: -50%;
   position: absolute;  
   width: 55px;
@@ -263,7 +274,7 @@ textarea:focus{
 .comment-box{
   display: block;
     width: 400px;
-    padding: 10px;
+    padding: 15px;
     border-bottom: 1px solid #ccc;
     margin-top: 0 auto;
     color: #515151;

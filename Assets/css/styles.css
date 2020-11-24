@@ -1,8 +1,6 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 /* END CSS RESET */
 
-/* colors : dark blue: #33697B - dark pink: #FC8585 - soft pink: #FC9885 */
-
 
 
 /* Landing page */
@@ -52,12 +50,11 @@ h2{
 /* Landpage Find a walk - flip button*/
 
 
-
 .signinbtn{
     background-color: transparent;
-    border: 3px solid #ffffff;
+    border: 3px solid #fff;
     border-radius: 20px;
-    color: #ffffff;
+    color: white;
     cursor: pointer;
     height: 34px;
     font-size: 13px;
@@ -68,104 +65,25 @@ h2{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3vh;
 
 }
 
 .signinbtn:hover{
+    background-color: #F1B24A;
+    border: 3px solid  #F1B24A;
+    color: #fff;
+    border: transparent;
+    outline: none;
+}
+
+
+.signupbtn:hover{
     background-color: #ffffff;
     border: transparent;
     color:#F1B24A;
     outline: none;
 }
 
-/* for special button */
-
-  
-button {
-  font-family: 'Roboto', sans-serif;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    outline: none;
-    border: 0;
-    vertical-align: middle;
-    text-decoration: none;
-    background: transparent;
-    padding: 0;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid #ffffff;
-    border-radius: 20px;
-    
-  }
-  button.learn-more {
-    width: 12rem;
-    height: auto;
-  }
-  button.learn-more .circle {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: relative;
-    display: block;
-    margin: 0;
-    width: 3rem;
-    height: 3rem;
-    background: #F1B24A;
-    border-radius: 1.625rem;
-  }
-  button.learn-more .circle .icon {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    background: #fff;
-  }
-  button.learn-more .circle .icon.arrow {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    left: 0.625rem;
-    width: 1.125rem;
-    height: 0.125rem;
-    background: none;
-  }
-  button.learn-more .circle .icon.arrow::before {
-    position: absolute;
-    content: "";
-    top: -0.25rem;
-    right: 0.0625rem;
-    width: 0.625rem;
-    height: 0.625rem;
-    border-top: 0.125rem solid #fff;
-    border-right: 0.125rem solid #fff;
-    transform: rotate(45deg);
-  }
-  button.learn-more .button-text {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem;
-    color: #fff;
-    font-weight: 700;
-    line-height: 1.6;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  button:hover .circle {
-    width: 100%;
-  }
-  button:hover .circle .icon.arrow {
-    background: #fff;
-    transform: translate(1rem, 0);
-  }
-  button:hover .button-text {
-    color: #fff;
-  }
-  
 
 .signupbtn{
     background-color: #F1B24A;
@@ -186,7 +104,8 @@ button {
 
 }
 
-/* LOGIN PAGE  2 columns */
+
+/* Login & Register forms - 2 columns layout*/
 
 
 #error{
@@ -202,6 +121,7 @@ button {
     flex: 50%;
   }
 
+  /* login page background */
 .left{
 
     height: 100vh;
@@ -220,7 +140,6 @@ button {
    
 }
 
-/* Login & Register forms */
 
 .login-container{
     float: right;
@@ -247,7 +166,6 @@ button {
     font-family: 'Oswald', sans-serif;
     text-align: left;
 }
-
 
 
 legend{
@@ -282,11 +200,9 @@ a.forgot-pwd{
 outline: none;
 }
 
-#email-availability-status{
-    color: red;
-}
 
-/* Full-width inputs */
+
+  /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -297,7 +213,6 @@ input[type=text], input[type=password] {
     
   }
 
-
 /* password & icon */
 .toggle{
 display:none;
@@ -305,8 +220,6 @@ display:none;
 
 /* show/hide password icon */
 
-
-  
 .input-icons { 
     width: 100%; 
         
@@ -338,6 +251,7 @@ span[toggle="signuptoggle"]{
     color: #ffffff;
     font-weight: 700;
     padding: 10px 42px;
+    margin-top: 2vh;
     width: 100%;
 }
 
@@ -350,27 +264,59 @@ span[toggle="signuptoggle"]{
    
 }
 
-/* Responsive forms */
+/*!Responsive */
 
-@media only screen and (max-width:768px) and (min-width:300px){
+@media only screen and (max-width:768px) and (min-width:200px){
     
-    img.responsive{
-        height: 89px;
-        width: 89px;
+      #logo{
+        height: 30%;
+        width: 30%;
+        position: relative;
+
     }
 
-   
-    
-    .login-form{
-        height: 100vh;
-        width: 60vh;
-        display: flex;
-        flex-direction: column;
-       
-        }
+    h1{ 
+      font-weight: 800;
+      font-size: 34px;
+     
+  }
 
-        .btn.btn-warning, .btn.btn-info{
-            margin: 13px;
-        }
+    h2{
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 0;
+        
+    }
+  
+    /* login-register forms responsive*/
+  
+    .left, #signuppage{
+      display: none;
+    }
+
+    .login-container{ 
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10vh;
+     
+    }
+    /* Full-width inputs */
+    input[type=text], input[type=password] {
+      width: 65%;
+    }
+
+    span[toggle="password-field"], span[toggle="signuptoggle"]{
+      position: relative; 
+      float: right;
+      
+      z-index: 10;
+      }
+
+      .btn.btn-info{
+  
+        width: 65%;
+    }
+      
+  
 }
 

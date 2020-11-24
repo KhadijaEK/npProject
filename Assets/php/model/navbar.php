@@ -46,7 +46,7 @@
                     <button class="navdropbtn">Islands</button>
                     <div class="navdropdown-content">
                         <a href="#">Outer Hebrides</a>
-                        <a href="#">Isle of Skye</a>
+                        <a href="../view/skye.php">Isle of Skye</a>
                         <a href="#">Isle of Mull</a>
                     </div>
                     </div>

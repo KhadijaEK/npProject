@@ -2,7 +2,7 @@
     date_default_timezone_set('Europe/London');
     require('../model/weatherapi.php');
     include('../config/comments.php');
-    
+    $currentpage = 'highlands';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,22 +31,26 @@
     
     <div id="fullpage">
         <section>
+            <?php if($currentpage == 'highlands') {echo '<span class="breadcrumb">Highlands</span>';} ?>
                 <div class="gallery">
                     <figure class="gallery__item gallery__item--title">
                         <h1 class="gallery__img">Inverness - Loch Ness & Afric</h1>
                     </figure>
                     <figure class="gallery__item gallery__item--1">
-                        <img src="../../images/matteo-badini-nZkVni3TtIE-unsplash.jpg" class="gallery__img" alt="loch Ness Castle by Connor Mollison on Unsplash">
+                        <img src="../../images/matteo-badini-nZkVni3TtIE-unsplash.jpg" class="gallery__img" alt="Loch Ness Castle by Connor Mollison on Unsplash">
+                        <figcaption>Inverness - Photo by Matteo Badini</figcaption>
                     </figure>
                     <figure class="gallery__item gallery__item--2">
-                        <img src="../../images/ezra-winston-x6VxjXlBl1g-unsplash.jpg" class="gallery__img" alt="Image 2">
+                        <img src="../../images/ezra-winston-x6VxjXlBl1g-unsplash.jpg" class="gallery__img" alt="Photo by Ezra Winston">
+                        <figcaption>Photo by Ezra Winston</figcaption>
                     </figure>
                     <figure class="gallery__item gallery__item--3">
-                        <img src="../../images/megan-sanford-g_ssp9teiSA-unsplash.jpg" class="gallery__img" alt="Image 3">
-                    
+                        <img src="../../images/megan-sanford-g_ssp9teiSA-unsplash.jpg" class="gallery__img" alt="Photo by Megan Sanford">
+                        <figcaption>Photo by Megan Sanford (All pictures from Unsplash)s</figcaption>
                     </figure>
                     <figure class="gallery__item gallery__item--4">
-                        <img src="../../images/roan-lavery-fIFpi7JK33c-unsplash.jpg" class="gallery__img" alt="Image 4">
+                        <img src="../../images/roan-lavery-fIFpi7JK33c-unsplash.jpg" class="gallery__img" alt="Photo by Roan Lavery">
+                        <figcaption>Photo by Roan Lavery</figcaption>
                 </div>
         </section>
         
@@ -54,7 +58,8 @@
             <div class="grid">
 
                 <figure class="grid__item grid__item--map">
-                    <div id="viewDiv"></div>
+                    <!--<div id="viewDiv"></div>-->
+                    <iframe id="viewDiv" class="alltrails" src="https://www.alltrails.com/widget/map/mon-23-nov-2020-09-55-36d7534?u=m" width="100%" height="400" frameborder="0" scrolling="no" marginheight="20" marginwidth="0" title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"></iframe>
                 </figure>
                 <figure class="grid__item grid__item--weather">
                     <h5><i class="fa fa-map-marker" aria-hidden="true"></i><?php echo $data->name; ?> Weather Status</h5>
@@ -93,8 +98,8 @@
            
                 <!--Comment section-->
                 <figure class="grid__item grid__item--comment">
+                        <h5>Comments</h5>
                             <div class="comment-container">
-                                        <p>Comments</p>
                                             <?php
                                             echo "
                                                 <form method='POST' action='".setComments($db)."'>
@@ -116,10 +121,7 @@
       
 
             <!--Scripts all pages-->
-            
-      
-                <script src="../../js/navbar.js"></script>
-                
+                <script src="../../js/navbar.js"></script>                
                 <script src="https://kit.fontawesome.com/1c8661e552.js" crossorigin="anonymous"></script>
             <!--End scripts all pages-->
 
@@ -222,6 +224,9 @@
 
     </script>
     <!--end map-->
+
+    <!--test breadcrumbs-->
+    
 
     <!--Code to include footer-->
     <?php include("./../model/footer.php"); ?>

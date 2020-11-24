@@ -212,7 +212,7 @@ i[class^="fa"]{
     width: 144px;
     outline: none;
     font-family: 'Roboto', sans-serif;
-  
+    cursor: pointer;
 
 }
 
@@ -229,12 +229,14 @@ i[class^="fa"]{
 .navdropdown-content {
   display: none;
   position: absolute;
-  top: 70%;
+  top: 77%;
+  left: 5%;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   background-color: #ffffff;
-  min-width: 150px;
+  width: 144px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
   z-index: 1;
 }
 

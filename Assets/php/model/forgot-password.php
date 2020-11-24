@@ -78,7 +78,9 @@ if(isset($_POST['email'])){
         <meta charset="UTF-8">
         <title>Forgot password?</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> 
+           <link rel="stylesheet" src="../../css/styles.css" /> 
+           
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
 
     </head>
@@ -92,8 +94,8 @@ if(isset($_POST['email'])){
                 <input type="email" id="email" class="form-control" name="email" placeholder="email" required><br>
                 <input type="submit" class="btn btn-primary" name="sendEmail" value="Send email">
             </form>
-                <p>Not registered yet? <a href="../../php/view/signup.php">Sign up</a></p>
-                <p>Already a member? <a href="../../php/model/login.php">Sign in</a></p>
+                <span>Not registered yet? <a href="../../php/view/register.php">Sign up</a><span>
+                <span>Already a member? <a href="../../php/model/loginfinal.php">Sign in</a></span>
         </div>
 
 
